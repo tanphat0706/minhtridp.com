@@ -1,0 +1,110 @@
+/**
+  @author Phat Le
+  Create 2016/10/25
+*/
+.required {
+    color: red;
+}
+
+.dataTable thead tr.title {
+    color: blue;
+    font-weight: bold;
+}
+
+#filter-area .full-width {
+    width: 100%;
+}
+
+.ui-autocomplete .ui-menu-item.ui-state-focus {
+    border: none;
+    background: #00c0ef;
+    color: #ffffff;
+}
+
+.ui-autocomplete .ui-menu-item .media {
+    margin-top: 0;
+    padding-bottom: 10px;
+}
+
+.ui-menu .ui-menu-item {
+    list-style-image: none;
+}
+
+#map-canvas-0 {
+    height: 500px !important;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+    background-color: rgba(0, 0, 0, 0.5); /*dim the background*/
+}
+
+.overlay img {
+    max-width: 50px;
+    position: fixed;
+    z-index: 999;
+    overflow: show;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.menu-galery-thumbnail {
+    background-size: cover;
+    background-position: center;
+    height: 150px;
+    background-repeat: no-repeat;
+    padding: 0;
+}
+
+.modal-dialog {
+    margin: 10px auto;
+}
+
+.text-danger {
+    color: #dd4b39;
+}
+
+.status-label {
+    width: 100%;
+    display: inline-block;
+    max-width: 65px;
+    padding: 5px;
+}
+
+button.ColVis_Button {
+    padding: 5px 10px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 0;
+    margin-left: 5px;
+    background-color: #fff;
+    border-color: #ccc;
+}
+
+button.ColVis_Button:hover {
+    color: #333;
+    background-color: #e6e6e6;
+    border-color: #adadad;
+}
+
+.datatable-button {
+    position: absolute;
+    top: -45px;
+    left: -5px;
+}
+
+.disable-property {
+    display: none;
+}
+
+.use-property {
+    display: block;
+}

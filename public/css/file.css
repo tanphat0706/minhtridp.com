@@ -1,0 +1,121 @@
+/*
+* @Author: lich.dv
+* @Date:   2016-03-25 08:12:07
+* @Last Modified by:   lich.dv
+* @Last Modified time: 2016-03-25 10:09:34
+*/
+/*.select-file-btn{
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 3;
+	width: 105px;
+	border-radius: 0 !important;
+}*/
+.file-group input[type="file"]{
+    display: none;
+}
+.file-group{
+	position: relative;
+	display: table;
+	border-collapse: separate;
+	width: 100%;
+}
+.file-group .show-file{
+	padding: 10px;
+    border: 1px solid #d2d6de;
+    border-top: none;
+}
+.file-group .show-file .item img{
+	max-width: 100%;
+}
+
+.file-group .show-file .item{
+    max-width: 100%;
+    display: inline-block;
+    padding: 4px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: border .2s ease-in-out;
+    margin-right: 5px;
+    margin-left: 5px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    box-shadow: 1px 1px 5px 0 #a2958a;
+}
+.file-group .show-file .item .caption{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.file-group input[type="file"]::-webkit-file-upload-button{
+    visibility: hidden;
+}
+.file-input-group{
+    position: relative;
+    display: table;
+    border-collapse: separate;
+    width: 100%;
+}
+.file-input-group .select-file-btn{
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+    text-align: center;
+    display: table-cell;
+    width: 1%;
+    white-space: nowrap;
+    vertical-align: middle;
+    border: 1px solid #ccc;
+}
+.file-form-control{
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+.file-input-group .file-form-control {
+    position: relative;
+    z-index: 2;
+    float: left;
+    width: 100%;
+    margin-bottom: 0;
+    display: table-cell;
+}
+
+.file-input-group .file-form-control:first-child, .file-input-group .select-file-btn:first-child{
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.file-input-group .file-form-control:first-child, .file-input-group .select-file-btn:first-child{
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.file-input-group .file-form-control:last-child, .file-input-group .select-file-btn:last-child{
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.file-input-group .select-file-btn:first-child {
+    border-right: 0;
+}
+.file-input-group .select-file-btn:last-child {
+    border-left: 0;
+}
+.file-input-group .select-file-btn:hover {
+    cursor: pointer;
+}
+.select-file-btn.btn{
+    border: none;
+}

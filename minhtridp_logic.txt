@@ -1,0 +1,5 @@
+﻿Khách hàng gửi request báo giá (từng sản phẩm) -> trạng thái pending
+Admin vào báo giá sản phẩm -> trạng thái đã xử lý
+Khách hàng nhận báo giá, đồng ý thì xác nhận đặt hàng, gửi qa mail -> trang thái lập đơn hàng
+ko đồng ý thì show phản hồi để nhập text. -> trang thái cancel.
+Thanh toán xong. admin vào xác nhận -> khách hàng tích điểm -> trang thái thành công.
