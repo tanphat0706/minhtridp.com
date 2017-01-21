@@ -10,36 +10,48 @@
 | and give it the controller to call when that URI is requested.
 |
 */
+Route::group([
+    'middlewareGroup' => ['web'],
+], function () {
+    Route::get('/', function () {
+        return redirect()->route('frontend');
+    });
+    Route::get('/home', function () {
+        return redirect()->route('frontend');
+    });
+    Route::get('/index', function () {
+        return redirect()->route('frontend');
+    });
+    Route::get('/login', [
+        'as' => 'login',
+        'uses' => 'Auth\AuthController@getLogin'
+    ]);
+    Route::post('/login', [
+        'as' => 'login',
+        'uses' => 'Auth\AuthController@postLogin'
+    ]);
+    Route::get('/flyer-leaflet', [
+        'as' => 'flyer',
+        function () {
+            return view('category.flyer-leaflet');
+        }
+    ]);
+    Route::get('/flyer-leaflet/a6-flyer-leaflet', [
+        'as' => 'a6-flyer',
+        function () {
+            return view('product.a6-flyer');
+        }
+    ]);
+    Route::get('/trang-ca-nhan', [
+        'as' => 'my-page',
+        'uses' => 'HomeController@mypage'
+    ]);
+    Route::post('/bao-gia', [
+        'as' => 'bao-gia',
+        'uses' => 'ProductController@bao_gia'
+    ]);
+});
 
-Route::get('/', function () {
-    return redirect()->route('frontend');
-});
-Route::get('/home', function () {
-    return redirect()->route('frontend');
-});
-Route::get('/index', function () {
-    return redirect()->route('frontend');
-});
-Route::get('/login', [
-    'as' => 'login',
-    'uses' => 'Auth\AuthController@getLogin'
-]);
-Route::post('/login', [
-    'as' => 'login',
-    'uses' => 'Auth\AuthController@postLogin'
-]);
-Route::get('/flyer-leaflet', [
-    'as' => 'flyer',
-    function () {
-        return view('category.flyer-leaflet');
-    }
-]);
-Route::get('/flyer-leaflet/a6-flyer-leaflet', [
-    'as' => 'a6-flyer',
-    function () {
-        return view('product.a6-flyer');
-    }
-]);
 Route::match([
     'get',
     'post'
