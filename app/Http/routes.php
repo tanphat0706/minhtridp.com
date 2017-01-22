@@ -10,6 +10,7 @@
 | and give it the controller to call when that URI is requested.
 |
 */
+Route::auth();
 Route::group([
     'middlewareGroup' => ['web'],
 ], function () {
@@ -26,9 +27,21 @@ Route::group([
         'as' => 'login',
         'uses' => 'Auth\AuthController@getLogin'
     ]);
+    Route::post('/register', [
+        'as' => 'register',
+        'uses' => 'Auth\AuthController@postRegister'
+    ]);
     Route::post('/login', [
         'as' => 'login',
         'uses' => 'Auth\AuthController@postLogin'
+    ]);
+    Route::get('/thay-doi-thong-tin', [
+        'as' => 'change-profile',
+        'uses' => 'UserController@edit_profile'
+    ]);
+    Route::post('/thay-doi-thong-tin-exc', [
+        'as' => 'change-profile-exc',
+        'uses' => 'UserController@update_profile'
     ]);
     Route::get('/flyer-leaflet', [
         'as' => 'flyer',
@@ -49,6 +62,18 @@ Route::group([
     Route::post('/bao-gia', [
         'as' => 'bao-gia',
         'uses' => 'ProductController@bao_gia'
+    ]);
+    Route::get('/trang-ca-nhan/{order_code}', [
+        'as' => 'feedback',
+        'uses' => 'OrderController@feedback'
+    ]);
+    Route::get('/agree', [
+        'as' => 'agree',
+        'uses' => 'OrderController@agree'
+    ]);
+    Route::get('/notagree', [
+        'as' => 'notagree',
+        'uses' => 'OrderController@notagree'
     ]);
 });
 
@@ -122,10 +147,6 @@ Route::group([
                 'uses' => 'UserController@profile'
             ]);
 
-            Route::post('/updateProfile', [
-                'as' => 'update-profile',
-                'uses' => 'UserController@updateProfile'
-            ]);
         });
         /**
          * User Group router
@@ -379,6 +400,31 @@ Route::group([
             Route::delete('/delete/{id}', [
                 'as' => 'property-del',
                 'uses' => 'ProductController@destroy'
+            ]);
+        });
+        Route::group([
+            'prefix' => 'order'
+        ], function () {
+            Route::get('/list', [
+                'as' => 'order-list',
+                'uses' => 'OrderController@index'
+            ]);
+            // Ajax for datatables
+            Route::get('/getOrderJson', [
+                'as' => 'json-order-list',
+                'uses' => 'OrderController@getOrderJson'
+            ]);
+            Route::get('/edit/{id}', [
+                'as' => 'order-edit',
+                'uses' => 'OrderController@edit'
+            ]);
+            Route::put('/update/{id}', [
+                'as' => 'order-update',
+                'uses' => 'OrderController@update'
+            ]);
+            Route::get('/send/{id}', [
+                'as' => 'order-send',
+                'uses' => 'OrderController@send_order'
             ]);
         });
     });

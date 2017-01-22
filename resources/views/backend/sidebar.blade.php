@@ -52,22 +52,9 @@
                 </ul>
             </li>
 
-            <li class="treeview {{ (Route::is('product-list') ? ' active' : '') }} {{ (Route::is('product-create') ? ' active' : '') }}">
-                <a href="#"> <i class="fa fa-picture-o"></i><span>{{ trans('product.products') }}</span><span
-                            class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span></a>
-                <ul class="treeview-menu">
-
-                    <li {{ (Route::is('product-list') ? 'class  =active' : '') }}><a
-                                href="{{ route('product-list') }}"><i
-                                    class="fa fa-circle-o"></i> {{ trans('product.list') }}</a></li>
-
-                    <li {{ (Route::is('product-create') ? 'class  =active' : '') }}><a
-                                href="{{ route('product-create') }}"><i
-                                    class="fa fa-circle-o"></i> {{ trans('product.add') }}</a></li>
-
-                </ul>
+            <li class="treeview {{ (Route::is('order-list') ? ' active' : '') }}">
+                <a href="{{ route('order-list') }}">
+                    <i class="fa fa-circle-o"></i> Danh sách yêu cầu báo giá</a>
             </li>
         </ul>
     </section>

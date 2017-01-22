@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Order;
+use App\User;
 use Illuminate\Http\Request;
 use Response;
 use Datatables;
@@ -25,37 +26,45 @@ class OrderController extends Controller
      */
     public function getOrderJson()
     {
-        $carou = Order::select('id','title', 'img_url', 'status', 'description','created_at');
+        $order = Order::select('order_feedback.id','users.name as customer', 'order_code', 'content', 'order_feedback.status','result','comment','order_feedback.created_at','order_feedback.updated_at')
+            ->leftJoin('users', 'users.id', '=', 'order_feedback.user_id');;
         $buttons = array();
-        return Datatables::of($carou)
-            ->editColumn('status', function ($carou) {
-                return '<span class="flat label status-label label-' . $carou->getStatusColor() . '">' . $carou->getStatus() . '</span>';
+        return Datatables::of($order)
+            ->editColumn('status', function ($order) {
+                return '<span class="flat label status-label label-' . $order->getStatusColor() . '">' . $order->getStatus() . '</span>';
             })
-            ->addColumn('action', function ($carou) {
+            ->editColumn('result', function ($order) {
+                if($order->result == 0){
+                    return '<span class="flat label status-label label-default">Chưa phản hồi</span>';
+                }elseif ($order->result == 1){
+                    return '<span class="flat label status-label label-success">Đồng ý</span>';
+                }elseif ($order->result == 2){
+                    return '<span class="flat label status-label label-danger">Không đồng ý</span>';
+                }
+            })
+            ->addColumn('action', function ($order) {
                 $buttons = array();
-
+                if($order->status == 2){
                     $buttons[] = [
-                        'href' => 'edit/' . e($carou->id),
+                        'href' => 'edit/' . e($order->id),
+                        'icon' => 'eye',
+                        'type' => 'info',
+                        'label' => 'Xem'
+                    ];
+                }else{
+                    $buttons[] = [
+                        'href' => 'edit/' . e($order->id),
                         'icon' => 'edit',
                         'type' => 'primary',
-                        'label' => trans('system.edit')
+                        'label' => 'Xử lý'
                     ];
-
-                    $formId = 'delete-Order-' . e($carou->id);
                     $buttons[] = [
-                        'href' => '#' . e($carou->id),
-                        'icon' => 'remove',
-                        'type' => 'danger',
-                        'delete' => e($carou->id),
-                        'id' => $formId,
-                        'route' => 'Order-del',
-                        'label' => trans('system.del'),
-                        'htmlOptions' => [
-                            "onclick" => "confirmDelete('$formId')"
-                        ]
+                        'href' => route('order-send',$order->id),
+                        'icon' => 'send',
+                        'type' => 'warning',
+                        'label' => 'Gửi'
                     ];
-
-
+                }
                 $action = view('partial.action', compact('buttons'))->render();
                 return (string)$action;
             })
@@ -68,49 +77,7 @@ class OrderController extends Controller
      */
     public function index()
     {
-        return view('Order.list');
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        $listStatus = $this->Order->createListStatus();
-        return view('Order.create',compact('listStatus'));
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        $carou = $request->all();
-        $time = time();
-        $trimSpace = str_replace(" ", "_", strtolower($carou['title']));
-        $img_type = $request->file('img_url')->getClientOriginalExtension();
-        $image = \Image::make($request->file('img_url')->getRealPath());
-        $imageName = "img_" . $trimSpace . "_" . $time;
-        $image->save(public_path('images/Order_img/' . $imageName . "." . $img_type));
-        $carou['img_url'] = $imageName.".".$img_type;
-        Order::create($carou);
-        return redirect()->route('Order-list');
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
+        return view('order.list');
     }
 
     /**
@@ -121,11 +88,9 @@ class OrderController extends Controller
      */
     public function edit($id)
     {
-        $carou = Order::find($id);
-
-        $listStatus = $this->Order->createListStatus();
-
-        return view('Order.edit', compact('carou', 'listStatus'));
+        $order = Order::find($id);
+        $user = User::find($order->user_id);
+        return view('order.edit', compact('order','user'));
     }
 
     /**
@@ -137,41 +102,63 @@ class OrderController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $carouUpdate = $request->all();
-        $carou = Order::find($id);
-
-        $carou->title = $carouUpdate['title'];
-        $time = time();
-        $trimSpace = str_replace(" ", "_", strtolower($carou['title']));
-        $imageName = "img_" . $trimSpace . "_" . $time;
-        if(isset($carouUpdate['img_url'])){
-            $img_type = $request->file('img_url')->getClientOriginalExtension();
-            $image = \Image::make($request->file('img_url')->getRealPath());
-            $image->save(public_path('images/Order_img/' . $imageName . "." . $img_type));
-//            $request->file('image_url')->move(base_path() . '/public/images/category_img/', $imageName);
-            \File::delete(public_path('images/Order_img/' . $carou->img_url));
-            $carou->img_url = $imageName. "." . $img_type;
-        }
-        $carou->status = $carouUpdate['status'];
-        $carou->order_number = $carouUpdate['order_number'];
-        $carou->description = $carouUpdate['description'];
-        $carou->save();
-        return redirect()->route('Order-list');
+        $orderUpdate = $request->all();
+        $order = Order::find($id);
+        $order->price = str_replace(',', '', $orderUpdate['price']);
+        $order->status = 1;
+        $order->save();
+        return redirect()->route('order-list');
+    }
+    public function send_order($id)
+    {
+        $order = Order::find($id);
+        $order->status = 2;
+        $order->save();
+        return redirect()->route('order-list');
     }
 
+    public function feedback($order_code){
+        if(\Auth::user()){
+            $order = $this->order->getOrderByCode($order_code);
+            return view('order.feedback',compact('order'));
+        }else{
+            return redirect()->route('frontend');
+        }
+    }
+    public function agree(Request $request){
+        $agree=$request->all();
+        $order = $this->order->getOrderByCode($agree['order_code']);
+        $orderUpdate = $this->order->find($order->id);
+        $orderUpdate->result = 1;
+//        dd($orderUpdate);
+        $orderUpdate->save();
+        $data = array('code' => $orderUpdate['order_code'], 'content' =>$orderUpdate['content'], 'price' => $orderUpdate['price']);
+        $this->sendMailRequestformUser($data, \Auth::user()->email, 'Xác nhận báo giá từ Minhtri DP');
+        \Session::flash('message','Chúng tôi sẽ liên hệ với quý khách trong thời gian sớm nhất ! Xin cảm ơn.');
+        return redirect()->route('my-page');
+    }
+    public function notagree(Request $request){
+        $notagree=$request->all();
+        $order = $this->order->getOrderByCode($notagree['order_code']);
+        $orderUpdate = $this->order->find($order->id);
+        $orderUpdate->result = 2;
+        $orderUpdate->comment = $notagree['feedback-content'];
+        $orderUpdate->save();
+        \Session::flash('message','Cảm ơn vì đã phản ánh về dịch vụ của chúng tôi ! Xin cảm ơn.');
+        return redirect()->route('my-page');
+    }
     /**
-     * Remove the specified resource from storage.
+     * Send mail for user
      *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @author Phat Le 22 Jan, 2017
+     * @return Response, send to multiple email
      */
-    public function destroy($id)
+    protected function sendMailRequestformUser($data, $mail, $subject)
     {
-        // find result by id and delete
-        $carou=Order::find($id);
-        \File::delete(public_path('images/Order_img/' . $carou->img_url));
-        $carou->delete();
-        // Redirecting to index() method
-        return redirect()->route('Order-list');
+        \Mail::send('emails.confirm', $data, function ($message) use ($mail, $subject) {
+            $message->from(env('MAIL_FROM_ADMIN'), env('MAIL_NAME_ADMIN'));
+            $message->to($mail)
+                ->subject($subject);
+        });
     }
 }

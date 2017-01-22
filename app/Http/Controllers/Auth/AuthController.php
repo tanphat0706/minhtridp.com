@@ -59,6 +59,7 @@ class AuthController extends Controller
         return Validator::make($data, [
             'name' => 'required|max:255',
             'email' => 'required|email|max:255|unique:users',
+            'phone' => 'required|numeric|digits_between:10,11',
             'password' => 'required|confirmed|min:6'
         ]);
     }
@@ -74,7 +75,11 @@ class AuthController extends Controller
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
-            'password' => bcrypt($data['$request'])
+            'group_id' => 2,
+            'is_customer' => 1,
+            'status' => 1,
+            'phone' => $data['phone'],
+            'password' => bcrypt($data['password'])
         ]);
     }
 
@@ -112,10 +117,30 @@ class AuthController extends Controller
         if (method_exists($this, 'authenticated')) {
             return $this->authenticated($request, Auth::guard($this->getGuard())->user());
         }
-        if (auth()->user()->isCustomer()) {
-            return redirect()->route('frontend');
+        if (auth()->user()->group_id == 1) {
+            return redirect()->intended($this->redirectPath());
         }
 
-        return redirect()->intended($this->redirectPath());
+        return redirect()->route('frontend');
+    }
+
+    public function postRegister(Request $request)
+    {
+        $validator = $this->validator($request->all());
+
+        if ($validator->fails())
+        {
+            $this->throwValidationException(
+                $request, $validator
+            );
+        }
+
+        $user = $this->create($request->all());
+
+        if ($request->get('active')) {
+            $this->auth->login($user);
+        }
+
+        return redirect()->route('frontend');
     }
 }

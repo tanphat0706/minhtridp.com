@@ -185,7 +185,7 @@
     });
 
 </script>
-<script src="https://js.pusher.com/3.0/pusher.min.js"></script>
+{!! Html::script('js/pusher.min.js') !!}
 <script type="text/javascript">
     var _token = '{!! csrf_token() !!}';
     // Notification

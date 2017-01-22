@@ -4,7 +4,7 @@
  */
 namespace App\Http\Controllers;
 
-use Request;
+use Illuminate\Http\Request;
 use App\User;
 use App\UserGroup;
 use Response;
@@ -197,7 +197,6 @@ class UserController extends Controller
             } else {
                 Session::flash('error', trans('user.not_delete_yourself'));
             }
-
         }
 
         if ($result) {
@@ -206,29 +205,20 @@ class UserController extends Controller
         }
     }
 
-    /**
-     * Edit profile for user
-     */
-    public function profile()
-    {
+    public function edit_profile(){
         $user = User::find(Auth::user()->id);
-        return view('user.profile', compact('user'));
+        return view('auth.update',compact('user'));
     }
-
-    /**
-     * Update user profile.
-     *
-     * @param int $id
-     * @return Response
-     */
-    public function updateProfile(UserProfileRequest $request)
-    {
-        $result = $this->userServices->storeProfile($request);
-        if ($result) {
-            Session::flash('message', trans('user.edited_profile'));
-            return redirect()->route('profile');
-        } else {
-            return redirect()->back()->withErrors(trans('system.can_not_save'));
+    public function update_profile(Request $request){
+        $update = $request->all();
+        $user = User::find(Auth::user()->id);
+        if($update['password'] != '') {
+            $user->password = $update['password'];
         }
+        $user->name = $update['name'];
+        $user->email = $update['email'];
+        $user->phone = $update['phone'];
+        $user->save();
+        return redirect()->route('my-page');
     }
 }

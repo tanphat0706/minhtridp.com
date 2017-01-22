@@ -34,6 +34,7 @@
                             <span><i class="fa fa-envelope"></i></span> {{\Auth::user()->email}}</li>
                         <li class="list-group-item">
                             <span><i class="fa fa-mobile"></i></span> {{\Auth::user()->phone}}</li>
+                        <a href="{{route('change-profile')}}" style="width: 100%" class="btn btn-primary">Thay đổi thông tin</a>
                     </ul>
                 </div>
             </div>
@@ -47,9 +48,10 @@
                             <table class="don-hang-tbl table table-bordered">
                                 <thead>
                                 <tr>
-                                    <th>Mã ĐH</th>
-                                    <th width="200px">Đơn hàng</th>
+                                    <th width="90px">Mã ĐH</th>
+                                    <th width="150px">Đơn hàng</th>
                                     <th>Tình trạng</th>
+                                    <th>Báo giá</th>
                                     <th>Ngày yêu cầu</th>
                                     <th>Ngày xử lý</th>
                                     <th>#</th>
@@ -62,16 +64,31 @@
                                    <td>{{$order->content}}</td>
                                    <td>
                                        @if($order->status == 0)
-                                           Chưa xử lý
+                                           <span class="flat label status-label label-default">Chưa xử lý</span>
                                        @elseif($order->status == 1)
-                                            Đang xử lý
+                                           <span class="flat label status-label label-warning">Đang xử lý</span>
                                        @else
-                                           Đã xử lý
+                                           <span class="flat label status-label label-success">Đã xử lý</span>
                                        @endif
                                    </td>
-                                   <td>{{$order->created_at}}</td>
-                                   <td>{{$order->updated_at}}</td>
-                                   <td><button type="button" class="btn btn-info">Phản hồi</button></td>
+                                   <td>
+                                       @if($order->price != null && $order->price != 0)
+                                           <span class="flat label status-label label-danger">{{number_format($order->price)}} VNĐ</span>
+                                       @else
+                                           <span class="flat label status-label label-default">Đợi báo giá</span>
+                                       @endif
+                                   </td>
+                                   <td>{{date_format($order->created_at,'d-m-Y H:i')}}</td>
+                                    @if($order->status != 0)
+                                    <td>{{date_format($order->updated_at,'d-m-Y H:i')}}</td>
+                                    @endif
+                                   <td>
+                                       @if($order->status == 2 && $order->result ==0)
+                                       <a href="{{route('feedback',$order->order_code)}}" class="btn btn-info">Phản hồi</a>
+                                       @elseif($order->result !=0)
+                                           <p class="btn btn-default disabled" style="color: #000">Kết thúc</p>
+                                       @endif
+                                   </td>
                                 </tr>
                                 @endforeach
                                 </tbody>
@@ -80,10 +97,6 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
-    </div>
-
-
 @endsection

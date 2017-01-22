@@ -93,19 +93,24 @@ class ProductController extends Controller
 
     public function bao_gia(Request $request)
     {
-        $param = $request->all();
-        $order = [];
-        if (Auth::user()) {
-            $code = 'ODFD' . substr(str_shuffle(str_repeat("0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ", 6)), 0, 6);
-            $order['user_id'] = Auth::user()->id;
-            $order['order_code'] = $code;
-            $order['content'] = $param['product_name'] . ' - ' . $param['option1'] . ' - ' . $param['option2'] . ' - ' . $param['qty'].' cái';
-            Order::create($order);
-            \Session::flash('message', 'Chúng tôi sẽ phản hồi quý khách trong vòng 24h, vui lòng vào trang cá nhân để kiểm tra trạng thái !');
-            return redirect()->back();
-        } else {
-            \Session::flash('error', 'Vui lòng đăng nhập trước khi yêu cầu báo giá !');
-            return redirect()->back();
+        if(\Auth::user()){
+            $param = $request->all();
+            $order = [];
+            if (Auth::user()) {
+                $code = 'ODFD' . substr(str_shuffle(str_repeat("0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ", 6)), 0, 6);
+                $order['user_id'] = Auth::user()->id;
+                $order['order_code'] = $code;
+                $order['content'] = $param['product_name'] . ' - ' . $param['option1'] . ' - ' . $param['option2'] . ' - ' . $param['qty'].' cái';
+                Order::create($order);
+                \Session::flash('message', 'Chúng tôi sẽ phản hồi quý khách trong vòng 24h, vui lòng vào trang cá nhân để kiểm tra trạng thái !');
+                return redirect()->back();
+            } else {
+                \Session::flash('error', 'Vui lòng đăng nhập trước khi yêu cầu báo giá !');
+                return redirect()->back();
+            }
+        }else{
+            return redirect()->route('frontend');
         }
+
     }
 }

@@ -30,7 +30,12 @@ class HomeController extends Controller
         return view('admin');
     }
     public function mypage(){
-        $orders = Order::where('user_id',\Auth::user()->id)->get();
-        return view('mypage',compact('orders'));
+        if(\Auth::user()){
+            $orders = Order::where('user_id',\Auth::user()->id)->get();
+            return view('mypage',compact('orders'));
+        }else{
+            return redirect()->route('frontend');
+        }
+
     }
 }
