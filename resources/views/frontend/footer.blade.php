@@ -215,9 +215,9 @@
         <div class="bottom-bar hidden-sm">
             <div class="container">
                 <div class="row">
-                    <div class="logo col-sm-1">
+                    <div class="logo col-sm-2">
                         <a href="#">
-                            <img src="{{asset('images/logo-footer.png')}}">
+                            <img style="max-width: 150px" src="{{asset('images/LOGOFullw.svg')}}">
                         </a>
                     </div>
                     <div class="bold col-sm-2  hidden-xs">

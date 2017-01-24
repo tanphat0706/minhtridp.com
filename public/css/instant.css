@@ -10275,7 +10275,7 @@ h6, .h6 {
 
 @media (max-width: 767px) {
     #home-page .home-slider .carousel-control {
-        margin-top: 33%
+        /*margin-top: 33%*/
     }
 
     #home-page .home-slider .item .container {
@@ -10650,8 +10650,8 @@ h6, .h6 {
 }
 
 #header .navbar .navbar-brand img {
-    height: 63px;
-    margin: 0 auto
+    /*height: 63px;*/
+    margin: 2% auto
 }
 
 #header .navbar.navbar-default {
@@ -11460,7 +11460,7 @@ h6, .h6 {
     }
 
     #header .navbar .navbar-header {
-        padding-top: 30px
+        padding-top: 15px
     }
 
     #header .dropdown-menu-large > li > ul > li > ul > li > a, #header .dropdown-menu > li > ul > li > ul > li > a {
@@ -12616,7 +12616,7 @@ h6, .h6 {
     }
 
     .logo {
-        margin-right: 25px
+        /*margin-right: 25px*/
     }
 
     .payment-cards {

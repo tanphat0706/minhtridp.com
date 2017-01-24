@@ -25,7 +25,7 @@
     <div id="sitewrapper">
         <div id="ReassurancePoints" class="hidden-xs">
             <div class="container">
-                <div class="row">
+
                     <div class="col-lg-12 text-center top-info">
                         <div class="row">
                             <div class="col-sm-6 col-md-4 reassurance-col">
@@ -42,7 +42,6 @@
                             </div>
                         </div>
                     </div>
-                </div>
             </div>
         </div>
         <div class="container">

@@ -55,36 +55,12 @@
                         <i class="fa fa-navicon fa-2x fa-inverse"></i>
                     </button>
 
-                    <a wt-identifier="ip-title" class="logo hidden-xs wt-identifier wti_iptitle"
-                       href="#"
-                       title="instant print. | Flyer &amp; Leaflet Printing with 24hr Dispatch"><img
-                                src="{{asset('images/logo.png')}}"
-                                alt="instant print. | Flyer &amp; Leaflet Printing with 24hr Dispatch"></a>
-                    <a wt-identifier="navbar-icon" class="navbar-brand visible-xs col-xs-5 wt-identifier wti_navbaricon"
+                    <a class="logo hidden-xs wt-identifier wti_iptitle" href="{{route('frontend')}}">
+                        <img src="{{asset('images/LOGOFull.svg')}}" style="max-width:200px"></a>
+                    <a class="navbar-brand visible-xs col-xs-10 wt-identifier wti_navbaricon"
                        href="#">
-                        <img class="img-responsive"
-                             src="{{asset('images/ip-mob-logo.png')}}">
+                        <img class="img-responsive" style="max-width:130px" src="{{asset('images/LOGOFull.svg')}}">
                     </a>
-
-                    <div class="mini-basket pull-right visible-xs col-xs-5 ng-scope"
-                         ng-controller="InstantPrint.BasketController">
-                        <a wt-identifier="mini-basket-clicked" href="#basket"
-                           title="Current basket" ng-click="miniBasketClicked()"
-                           class="wt-identifier wti_minibasketclicked">
-                            <div class="fa icon-basket col-xs-2">
-                                <img src="{{asset('images/basket-transparent-bg.png')}}">
-                            </div>
-
-                            <span class="basket-items-price col-xs-9 pull-right">
-                                <span><span ng-show="basketItemCount == 0"> 0 items</span><span
-                                            ng-show="basketItemCount &gt; 0" class="basket-number ng-hide">(<span
-                                                ng-bind="basketItemCount" class="ng-binding">0</span>)</span> - <strong
-                                            ng-show="basketItemCount &gt; 0" ng-bind="basket.TotalIncVat.DisplayValue"
-                                            class="ng-binding ng-hide"></strong><strong
-                                            ng-show="basketItemCount == 0">£0</strong></span>
-                            </span>
-                        </a>
-                    </div>
                 </div>
 
                 <div class="visible-sm col-sm-8 text-right pull-right number-container">

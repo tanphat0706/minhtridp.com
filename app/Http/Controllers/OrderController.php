@@ -58,12 +58,14 @@ class OrderController extends Controller
                         'type' => 'primary',
                         'label' => 'Xử lý'
                     ];
-                    $buttons[] = [
-                        'href' => route('order-send',$order->id),
-                        'icon' => 'send',
-                        'type' => 'warning',
-                        'label' => 'Gửi'
-                    ];
+                    if($order->status == 1) {
+                        $buttons[] = [
+                            'href' => route('order-send', $order->id),
+                            'icon' => 'send',
+                            'type' => 'warning',
+                            'label' => 'Gửi'
+                        ];
+                    }
                 }
                 $action = view('partial.action', compact('buttons'))->render();
                 return (string)$action;
@@ -130,7 +132,7 @@ class OrderController extends Controller
         $order = $this->order->getOrderByCode($agree['order_code']);
         $orderUpdate = $this->order->find($order->id);
         $orderUpdate->result = 1;
-//        dd($orderUpdate);
+        $orderUpdate->comment = $agree['feedback-content-2'];
         $orderUpdate->save();
         $data = array('code' => $orderUpdate['order_code'], 'content' =>$orderUpdate['content'], 'price' => $orderUpdate['price']);
         $this->sendMailRequestformUser($data, \Auth::user()->email, 'Xác nhận báo giá từ Minhtri DP');

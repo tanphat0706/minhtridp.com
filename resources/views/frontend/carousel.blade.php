@@ -11,25 +11,25 @@
         @foreach($carousel as $item )
             <div class="item {{ $flag==1 ? 'active' : '' }}">
                 <div class="container" style="background-color: #91989f">
-                    <div class="row">
+                    {{--<div class="row">--}}
                         <img class="img-responsive col-sm-12 no-padding"
                              src="{{asset('images/carousel_img/'.$item->img_url)}}"
                              alt="{{$item->title}}">
-                    </div>
-                    <div class="carousel-caption grey-text">
-                        <h2>
-                            {{$item->title}}
-                        </h2>
-                        <hr class="text-center">
-                        <h4 class="pc-display">
-                            {{$item->description}}
-                        </h4>
-                        <div class="carousel-buttons">
-                            <div class="start-shop white">
-                                <a href="#bundles" class="btn btn-primary-white btn-lg">Shop now</a>
-                            </div>
-                        </div>
-                    </div>
+                    {{--</div>--}}
+                    {{--<div class="carousel-caption grey-text">--}}
+                        {{--<h2>--}}
+                            {{--{{$item->title}}--}}
+                        {{--</h2>--}}
+                        {{--<hr class="text-center">--}}
+                        {{--<h4 class="pc-display">--}}
+                            {{--{{$item->description}}--}}
+                        {{--</h4>--}}
+                        {{--<div class="carousel-buttons">--}}
+                            {{--<div class="start-shop white">--}}
+                                {{--<a href="#bundles" class="btn btn-primary-white btn-lg">Shop now</a>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
                 </div>
             </div>
             {{--*/ $flag++ /*--}}

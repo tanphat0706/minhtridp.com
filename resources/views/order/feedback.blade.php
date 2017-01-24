@@ -39,6 +39,7 @@
                             <span><i class="fa fa-envelope"></i></span> {{\Auth::user()->email}}</li>
                         <li class="list-group-item">
                             <span><i class="fa fa-mobile"></i></span> {{\Auth::user()->phone}}</li>
+                        <a href="{{route('change-profile')}}" style="width: 100%" class="btn btn-primary">Thay đổi thông tin</a>
                     </ul>
                 </div>
             </div>
@@ -69,6 +70,7 @@
                                             <button type="submit" id="notagree" class="btn btn-danger" data-dismiss="modal">Không đồng ý</button>
                                         </form>
                                         <form action="{{route('agree')}}"  style="float: right">
+                                            <input id="feedback-content-2" type="hidden" name="feedback-content-2" value="">
                                             <input type="hidden" name="order_code" value="{{$order->order_code}}">
                                             <button type="submit" id="agree" class="btn btn-info" data-dismiss="modal">Đồng ý</button>
                                         </form>
@@ -85,6 +87,7 @@
         $(document).ready(function() {
             $("#feedback").change(function(){
                 $('#feedback-content').val($('#feedback').val());
+                $('#feedback-content-2').val($('#feedback').val());
             });
         });
     </script>
