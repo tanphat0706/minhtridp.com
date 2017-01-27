@@ -7,7 +7,7 @@
     <title>@yield('title', '') | {{ trans('system.app_name') }}</title>
     <link href="{{asset('css/instant.css')}}" rel="stylesheet">
     <link href="{{asset('css/style-frontend.css')}}" rel="stylesheet">
-    <link rel="shortcut icon" href="#Content/images/favicon.ico">
+    <link rel="shortcut icon" href="{{asset('favicon.ico')}}">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,500,500italic,700" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Fira+Sans:400,400italic,500,500italic,700' rel='stylesheet'
           type='text/css'>

@@ -28,13 +28,33 @@
         margin: 15px 10px 15px 10px;
     }
     .carousel-control.left{
-        left:6%;
+        left:2%;
     }
     .carousel-control.right{
-        right: 6%;
+        right: 2%;
     }
 }
-
+@media (min-width: 1900px) {
+    #home-page .home-slider .carousel-control{
+        width: 50px;
+         top: 0%;
+         margin-top: 0px;
+        bottom: auto;
+    }
+    #home-page .control-btn{
+        overflow: hidden;
+        height: 50px;
+        width: 100%;
+        top: 40%;
+        position: absolute;
+    }
+    .carousel-control.left {
+        left: 17%;
+    }
+    .carousel-control.right {
+        right: 17%;
+    }
+}
 .spnoibat {
     text-align: left;
     padding-bottom: 5px;
