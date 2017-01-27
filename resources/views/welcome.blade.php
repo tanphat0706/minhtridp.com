@@ -203,19 +203,18 @@
                         </div>
 
                         <div ng-repeat="item in list"
-                             class="brand-colour col-md-3 col-sm-6 col-xs-12">
+                             class="brand-colour col-md-4 col-sm-6 col-xs-12">
                             <div class="product-cont">
                                 <div class="bg">
                                     <div class="details">
-                                        <div class="product-title col-xs-12 brand-text">Opening hours.</div>
+                                        <div class="product-title col-xs-12 brand-text">Giờ làm việc</div>
                                         <div class="product-title-mini col-xs-12">
-                                            Mon - Fri: 9am to 8pm<br>
-                                            Saturday: 9am to 1pm
+                                            Thứ hai – Thứ bảy: 08:00 – 18:00
+                                            <p></p>
+                                            Chủ nhật: 09:00-13:-00
                                         </div>
-                                        <div class="info"><p>Hymenaeos hendrerit egestas, illo, tristique aperiam porta
-                                                duis iusto elit? Modi nam, tincidunt rhoncus diam, quam, parturient </p>
-                                            <p>Hymenaeos hendrerit egestas, illo, tristique aperiam porta duis iusto
-                                                elit? Modi nam, tincidunt</p>
+                                        <div class="info">
+                                            <p>Nhằm tạo thuận lợi cho công việc của Quý khách. Ngoài giờ làm việc, Quý khách vẫn có thểđặt hàng tại website hoặc gửi yêu cầu đến email của chúng tôi. Chúng tôi sẽphản hồi trong thời gian sớm nhất</p>
                                         </div>
                                     </div>
                                     <img alt=""
@@ -225,25 +224,24 @@
                         </div>
 
                         <div ng-repeat="item in list"
-                             class="brand-colour col-md-6 col-sm-6 col-xs-12">
+                             class="brand-colour col-md-5 col-sm-6 col-xs-12">
                             <div class="product-cont">
                                 <div class="bg">
                                     <div class="details">
-                                        <div class="product-title col-xs-12 brand-text">Useful contacts.</div>
+                                        <div class="product-title col-xs-12 brand-text">Thông tin liên hệ</div>
                                         <div class="info useful">
-                                            <p><span class="product-title-mini">free art check |</span><a
+                                            <p><span class="product-title-mini">Bộ phận kinh doanh |</span><a
                                                         href="#">sale@minhtridp.com</a><br>
-                                                Emo excepturi? Iure incidunt incididunt velit culpa minus, at class? Ea
-                                                dolores beatae ratione odit, dui orci enim hendrerit veniam ipsa, pede
+                                                Để giải đáp những thắc mắc về đơn hàng hoặc yêu cầu báo giá, Quý khách vui lòng liên hệ bộphận kinh doanh thông qua email trên.
                                             </p>
-                                            <p><span class="product-title-mini">free art check |</span><a
+                                            <p><span class="product-title-mini">Bộ phận thiết kế |</span><a
                                                         href="#">sale@minhtridp.com</a><br>
                                                 Emo excepturi? Iure incidunt incididunt velit culpa minus, at class? Ea
                                                 dolores beatae ratione odit, dui orci enim hendrerit veniam ipsa, pede.
                                                 Emo excepturi? Iure incidunt incididunt velit culpa minus, at class? Ea
                                                 dolores beatae ratione odit, dui orci enim hendrerit veniam ipsa, pede
                                             </p>
-                                            <p><span class="product-title-mini">free art check |</span><a
+                                            <p><span class="product-title-mini">Chăm sóc khách hàng |</span><a
                                                         href="#">sale@minhtridp.com</a><br>
                                                 Emo excepturi? Iure incidunt incididunt velit culpa minus, at class? Ea
                                                 dolores beatae ratione odit, dui orci enim hendrerit veniam ipsa, pede

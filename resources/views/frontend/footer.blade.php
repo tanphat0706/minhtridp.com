@@ -5,7 +5,7 @@
                 <div class="row">
                     <div class="get-in-touch col-xs-12 col-sm-6 col-md-3 ng-scope">
                         <div class="header-col">
-                            Get in touch
+                            Liên hệ
                             <hr>
                         </div>
                         <div class="col-xs-12 no-padding">
@@ -13,10 +13,10 @@
                                 <div class="col-xs-1 no-padding">
                                     <i class="fa fa-clock-o"></i>
                                 </div>
-                                <div class="col-xs-11">
-                                    <div class="bold">Monday - Friday: <span>09:00 - 19:00</span>
-                                    </div>
-                                    <div class="bold">Saturday: <span>09:00 - 13:00</span>
+                                <div class="col-xs-11 no-padding">
+                                    <div class="bold">Thứ hai –Thứ bảy: <span>08:00 – 18:00</span>
+                                    </div><p></p>
+                                    <div class="bold">Chủ nhật: <span>09:00 - 13:00</span>
                                     </div>
                                 </div>
                             </div>
@@ -25,8 +25,8 @@
                                 <div class="col-xs-1 no-padding">
                                     <i class="fa fa-phone"></i>
                                 </div>
-                                <div class="col-xs-11 col-sm-10">
-                                    <a href="#" class="bold wt-identifier wti_phonecall">0191 27 27 327<br></a>
+                                <div class="col-xs-11 col-sm-10 no-padding">
+                                    <a href="#" class="bold wt-identifier wti_phonecall">(08) 3830 2298<br></a>
                                 </div>
                             </div>
 
@@ -34,9 +34,9 @@
                                 <div class="col-xs-1 no-padding">
                                     <i class="fa fa-envelope"></i>
                                 </div>
-                                <div class="col-xs-11 col-sm-10">
-                                    <a class="bold break-word wt-identifier" href="mailto:office@instantprint.co.uk">
-                                        <span>office@instantprint.co.uk</span>
+                                <div class="col-xs-11 col-sm-10 no-padding">
+                                    <a class="bold break-word wt-identifier" href="mailto:sales@minhtridp.com ">
+                                        <span>sales@minhtridp.com </span>
                                     </a>
                                 </div>
                             </div>
@@ -44,10 +44,9 @@
                                 <div class="col-xs-1 no-padding">
                                     <i class="fa fa-map-marker text-center"></i>
                                 </div>
-                                <div class="col-xs-11 col-sm-10">
-                                    <span class="bold">Unit A Brookfields Park</span>
-                                    <br> Manvers Way, Manvers<br>
-                                    Rotherham S63 5DR
+                                <div class="col-xs-11 col-sm-10 no-padding">
+                                    <span class="bold">208 Lý Thái Tổ</span>
+                                    <br>Phường 1, Quận 3<br>Thành phố Hồ Chí Minh
                                 </div>
                             </div>
                         </div>
@@ -58,7 +57,7 @@
                             <hr>
                         </div>
                         <div class="row">
-                            <a href="https://twitter.com/instantprint" class="wt-identifier wti_iptwitter">
+                            <a href="#" class="wt-identifier wti_iptwitter">
                                 <div class="col-xs-6">
                                     <div class="row">
                                         <div class="social-button twitter col-xs-offset-1 col-xs-10">
@@ -72,7 +71,7 @@
                                     </div>
                                 </div>
                             </a>
-                            <a href="https://www.facebook.com/enjoyinstantprint">
+                            <a href="#">
                                 <div class="col-xs-6">
                                     <div class="row">
                                         <div class="social-button facebook col-xs-offset-1 col-xs-10">
@@ -88,7 +87,7 @@
                             </a>
                         </div>
                         <div class="row">
-                            <a href="https://plus.google.com/+instantprint/posts">
+                            <a href="#">
                                 <div class="col-xs-6">
                                     <div class="row">
                                         <div class="social-button gplus col-xs-offset-1 col-xs-10">
@@ -102,7 +101,7 @@
                                     </div>
                                 </div>
                             </a>
-                            <a href="https://instagram.com/enjoyinstantprint/">
+                            <a href="#">
                                 <div class="col-xs-6">
                                     <div class="row">
                                         <div class="social-button instagram col-xs-offset-1 col-xs-10">
@@ -119,7 +118,7 @@
                         </div>
 
                         <div class="row">
-                            <a href="https://www.pinterest.com/instantprint/">
+                            <a href="#">
                                 <div class="col-xs-6">
                                     <div class="row">
                                         <div class="social-button pinterest col-xs-offset-1 col-xs-10">
@@ -133,7 +132,7 @@
                                     </div>
                                 </div>
                             </a>
-                            <a href="https://www.linkedin.com/company/instantprint-co-uk">
+                            <a href="#">
                                 <div class="col-xs-6">
                                     <div class="row">
                                         <div class="social-button linkedin col-xs-offset-1 col-xs-10">
@@ -189,24 +188,22 @@
                     </div>
                     <div class="col-xs-12 col-sm-6 col-md-4">
                         <div class="header-col">
-                            Certifications
+                            Thông tin
                             <hr>
                         </div>
 
                         <div class="block-iso text-center">
-                            <img src="{{asset('images/ISO-9001.png')}}"
-                                 alt="ISO 9001 Print and Media Certification">
-                            <img src="{{asset('images/ISO-14001.png')}}"
-                                 alt="ISO 14001 Print and Media Certification">
-                            <img src="{{asset('images/FSC-new.png')}}"
+                            <img src="{{asset('images/LOGOFullw.svg')}}"
                                  alt="FSC">
                         </div>
 
                         <div class="iso-text">
-                            <span> Bluetree Design &amp; Print Ltd T/A www.instantprint.co.uk has been certified to ISO 9001:2008 &amp; ISO 14001:2004.</span>
+                            <span>CTY TNHH MTV Thiết Kế In Ấn Quảng Cáo Minh Trí </span>
                             <br>
                             <br>
-                            <span>For information on what this means please <a href="#">click here</a>.</span>
+                            <span>MST: 0313 655 452</span><br>
+                            <br>
+                            <span>www.minhtridp.com</span>
                         </div>
                     </div>
                 </div>
@@ -215,29 +212,25 @@
         <div class="bottom-bar hidden-sm">
             <div class="container">
                 <div class="row">
-                    <div class="logo col-sm-2">
+                    <div class="logo col-sm-2" style="margin: 5px 0;">
                         <a href="#">
                             <img style="max-width: 150px" src="{{asset('images/LOGOFullw.svg')}}">
                         </a>
                     </div>
-                    <div class="bold col-sm-2  hidden-xs">
-                        <p><span class="bold">© Copyright 2016</span></p>
+                    <div class="bold col-sm-2  hidden-xs" style="margin: 10px 0;">
+                        <p><span class="bold">© Copyright 2017</span></p>
                     </div>
-                    <div class="col-md-7 col-lg-8 payment-row">
+                    <div class="col-md-7 col-lg-6 payment-row">
                         <div class="payment-box">
-                            <div class="col-md-3 col-lg-2 col-lg-offset-3 hidden-xs ">
-                                <span class="we-accept">We accept</span>
+                            <div class="col-md-3 col-lg-4 col-lg-offset-2 hidden-xs no-padding" style="margin-top: 10px">
+                                <span class="we-accept" style="float: right">Chấp nhận thanh toán</span>
                             </div>
-                            <div class="col-lg-7 no-padding">
-                                <div class="hidden-xs center-cards">
+                            <div class="col-lg-6 no-padding">
+                                <div class="hidden-xs right">
                                     <div class="row">
                                         <div class="payment-cards card1"></div>
                                         <div class="payment-cards card2"></div>
                                         <div class="payment-cards card3"></div>
-                                        <div class="payment-cards card4"></div>
-                                        <div class="payment-cards card5"></div>
-                                        <div class="payment-cards card6"></div>
-                                        <div class="payment-cards card7"></div>
                                     </div>
                                 </div>
                                 <div class="hidden-lg hidden-md">
@@ -245,13 +238,6 @@
                                         <div class="payment-cards payment-images card1"></div>
                                         <div class="payment-cards payment-images card2"></div>
                                         <div class="payment-cards payment-images card3"></div>
-                                        <div class="payment-cards payment-images card4"></div>
-                                    </div>
-                                    <br>
-                                    <div class=" payment-cards-row">
-                                        <div class="payment-cards payment-images card5"></div>
-                                        <div class="payment-cards payment-images card6"></div>
-                                        <div class="payment-cards payment-images card7"></div>
                                     </div>
                                 </div>
                             </div>
@@ -283,10 +269,6 @@
                                 <div class="payment-cards card1"></div>
                                 <div class="payment-cards card2"></div>
                                 <div class="payment-cards card3"></div>
-                                <div class="payment-cards card4"></div>
-                                <div class="payment-cards card5"></div>
-                                <div class="payment-cards card6"></div>
-                                <div class="payment-cards card7"></div>
                             </div>
                         </div>
                     </div>

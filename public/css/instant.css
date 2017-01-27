@@ -6046,7 +6046,7 @@ a:hover {
 
 p {
     font-size: 11pt;
-    line-height: 14pt;
+    line-height: 15pt;
     font-weight: normal;
     color: #656565
 }
@@ -12272,7 +12272,7 @@ h6, .h6 {
 }
 
 #footer .footer-content .block-iso img {
-    width: 100px;
+    width: 70%;
     margin-top: 10px
 }
 
@@ -12374,6 +12374,7 @@ h6, .h6 {
 }
 
 #footer .bottom-bar p {
+    margin: 0;
     font-weight: 500;
     padding-top: 5px
 }
@@ -12420,24 +12421,28 @@ h6, .h6 {
 }
 
 #footer .bottom-bar .payment-cards {
-    width: 51px;
-    height: 32px;
+    width: 80px;
+    height: 45px;
     float: left;
     background-repeat: no-repeat;
     background-size: contain;
-    background-position: center
+    background-position: center;
+    /*border: 1px solid #f0ad4e;*/
 }
 
 #footer .bottom-bar .card1 {
-    background: url('../images/paymentcards.png') -1px -1px
+    background: url('../images/ACB.svg') no-repeat #fff;
+    background-size: 100%;
 }
 
 #footer .bottom-bar .card2 {
-    background: url('../images/paymentcards.png') -1px -100px
+    background: url('../images/Sacom.svg') no-repeat #fff;
+    background-size: 100%;
 }
 
 #footer .bottom-bar .card3 {
-    background: url('../images/paymentcards.png') -1px -133px
+    background: url('../images/VCB.svg') no-repeat #fff;
+    background-size: 100%;
 }
 
 #footer .bottom-bar .card4 {
