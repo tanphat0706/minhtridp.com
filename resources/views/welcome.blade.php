@@ -1,7 +1,7 @@
 @extends('frontend.template')
-@section('title', trans('system.home'))
+@section('title', 'Minh Trí DP | In Offset & In Nhanh KTS Chҩt lượng Nhanh chóng Giá rẻ')
 @section('content')
-    <div id="home-page" ng-controller="InstantPrint.HomePageController" class="ng-scope">
+    <div id="home-page" class="ng-scope">
         <div class="home-slider hero-unit">
             <div class="container-fluid no-padding">
                 @include('frontend/carousel')
@@ -13,7 +13,7 @@
                 <div class="pc-display spnoibat"><span>Sản phẩm nổi bật</span></div>
                 <div class="sp-display col-lg-12 text-center">
                     <div class="row lined">
-                        <span>Popular Products</span>
+                        <span>Sản phẩm nổi bật</span>
                     </div>
                 </div>
                 <!-- ngRepeat: list in featuredProductList -->
@@ -23,7 +23,6 @@
                         @foreach($cates as $cate)
                             <div ng-repeat="item in list"
                                  class="brand-colour col-md-3 col-sm-6 col-xs-12 ng-scope">
-                                {{--<div class="product-title col-xs-12 brand-text ng-binding">{{$cate->name}}</div>--}}
                                 <div class="product-cont">
                                     <div class="bg">
                                         <a title="Booklets" href="#booklets/">
@@ -53,16 +52,14 @@
                 <div class="row ">
                     <div class="col-sm-6 col-xs-12">
                         <div class="header">
-                            <h1 class="content-header">We're instantprint.&nbsp;</h1>
+                            <h1 class="content-header">Chúng tôi là Minh Trí DP</h1>
                         </div>
                         <div class="text">
-                            <p class="intro">The online print company that specialises in 24 hour flyer &amp; leaflets,
-                                business cards, posters, and stationery printing.</p>
-                            <p class="intro">Our ambition is to deliver the best through technology, innovation and
-                                development to ensure faster turnaround times, sharper pricing and a service that's
-                                worth talking about. So next time you need print, think instant print.<br><br><strong>You
-                                    do the business.<span class="sub-header"
-                                                          style="color: #5f9f3b;"> We do the print.</span></strong></p>
+                            <p class="intro">Đang cập nhật...<br><br>
+                                <strong>
+                                    <span class="sub-header" style="color: #5f9f3b;">Chất lượng - Nhanh chóng - Giá rẻ</span>
+                                </strong>
+                            </p>
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-6">
@@ -184,18 +181,15 @@
                                     <img alt=""
                                          src="{{asset('images/hello.png')}}">
                                     <div class="details">
-                                        <div class="product-title col-xs-12 brand-text">Say hello.</div>
-                                        <div class="product-title-mini col-xs-12">Purus, eros diam. Torquent blanditiis
-                                            phare
+                                        <div class="product-title col-xs-12 brand-text">Hãy thử & cảm nhận</div>
+                                        <div class="product-title-mini col-xs-12">
+                                            Đang cập nhật...
                                         </div>
                                         <div class="info"><p>
-                                                Hymenaeos hendrerit egestas, illo, tristique aperiam porta duis iusto
-                                                elit? Modi nam, tincidunt rhoncus diam, quam, parturient curabitur
-                                                occaecati etiam, pariatur lectus Hymenaeos hendrerit egestas, illo,
-                                                tristique aperiam porta duis iusto elit? Modi nam
+                                                Đang cập nhật...
                                             </p></div>
                                         <div class="btn btn-primary-dark-grey">
-                                            <a href="#booklets/">{{$cate->name}}</a>
+                                            <a href="#">Tại sao không ?</a>
                                         </div>
                                     </div>
                                 </div>
@@ -236,15 +230,11 @@
                                             </p>
                                             <p><span class="product-title-mini">Bộ phận thiết kế |</span><a
                                                         href="#">sale@minhtridp.com</a><br>
-                                                Emo excepturi? Iure incidunt incididunt velit culpa minus, at class? Ea
-                                                dolores beatae ratione odit, dui orci enim hendrerit veniam ipsa, pede.
-                                                Emo excepturi? Iure incidunt incididunt velit culpa minus, at class? Ea
-                                                dolores beatae ratione odit, dui orci enim hendrerit veniam ipsa, pede
+                                                Đang cập nhật...
                                             </p>
                                             <p><span class="product-title-mini">Chăm sóc khách hàng |</span><a
-                                                        href="#">sale@minhtridp.com</a><br>
-                                                Emo excepturi? Iure incidunt incididunt velit culpa minus, at class? Ea
-                                                dolores beatae ratione odit, dui orci enim hendrerit veniam ipsa, pede
+                                                        href="#">minhtridp@gmail.com</a><br>
+                                                Đang cập nhật...
                                             </p>
                                         </div>
                                     </div>

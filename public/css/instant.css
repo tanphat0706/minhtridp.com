@@ -3439,7 +3439,8 @@ textarea.input-group-sm > .form-control, textarea.input-group-sm > .input-group-
 @media (min-width: 768px) {
     .navbar-nav {
         float: left;
-        margin: 0
+        margin: 0;
+        margin-left: 20px;
     }
 
     .navbar-nav > li {
@@ -10522,7 +10523,7 @@ h6, .h6 {
     }
 
     #home-page .convincing-container {
-        height: 280px
+        height: 250px
     }
 
     #home-page .convincing-container .convincing-content {
@@ -12421,8 +12422,8 @@ h6, .h6 {
 }
 
 #footer .bottom-bar .payment-cards {
-    width: 80px;
-    height: 45px;
+    width: 70px;
+    height: 35px;
     float: left;
     background-repeat: no-repeat;
     background-size: contain;

@@ -30,15 +30,15 @@
                         <div class="row">
                             <div class="col-sm-6 col-md-4 reassurance-col">
                                 <img src="{{asset('images/star.png')}}">
-                                <span>Official Trustpilot score: 9.1 - Excellent!</span>
-                            </div>
-                            <div class="hidden-sm col-md-4 reassurance-col middle-col">
-                                <img src="{{asset('images/delivery.png')}}">
-                                <span>£4.99 delivery, free on orders over £75</span>
+                                <span>Thiết kế & In ấn Chuyên nghiệp</span>
                             </div>
                             <div class="col-sm-6 col-md-4 reassurance-col last-col">
                                 <img src="{{asset('images/clock-2.png')}}">
-                                <span>Order &amp; approve by 5pm for next day dispatch</span>
+                                <span>Đặt hàng & nhận hàng sau 2 đến 3 ngày</span>
+                            </div>
+                            <div class="hidden-sm col-md-4 reassurance-col middle-col">
+                                <img src="{{asset('images/delivery.png')}}">
+                                <span>Dịch vụ giao hàng tận nơi</span>
                             </div>
                         </div>
                     </div>

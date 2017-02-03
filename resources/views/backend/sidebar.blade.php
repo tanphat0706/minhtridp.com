@@ -51,7 +51,35 @@
 
                 </ul>
             </li>
-
+            <!-- SIDEBAR MENU: CATEGORY -->
+            @if (Auth::user()->hasRole('viewCategoryList') || Auth::user()->hasRole('addCategory'))
+                <li class="treeview {{ (Route::is('category-list') ? ' active' : '') }} {{ (Route::is('category-create') ? ' active' : '') }}">
+                    <a href="#">
+                        <i class="fa fa-picture-o"></i>
+                        <span>{{ trans('category.categories') }}</span>
+                        <span class="pull-right-container">
+                            <i class="fa fa-angle-left pull-right"></i>
+                        </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        @if (Auth::user()->hasRole('viewCategoryList'))
+                            <li {{ (Route::is('category-list') ? 'class  =active' : '') }}>
+                                <a href="{{ route('category-list') }}">
+                                    <i class="fa fa-circle-o"></i> {{ trans('category.list') }}
+                                </a>
+                            </li>
+                        @endif
+                        @if (Auth::user()->hasRole('addCategory'))
+                            <li {{ (Route::is('category-create') ? 'class  =active' : '') }}>
+                                <a href="{{ route('category-create') }}">
+                                    <i class="fa fa-circle-o"></i> {{ trans('category.add') }}
+                                </a>
+                            </li>
+                        @endif
+                    </ul>
+                </li>
+        @endif
+        <!-- END SIDEBAR MENU: CATEGORY -->
             <li class="treeview {{ (Route::is('order-list') ? ' active' : '') }}">
                 <a href="{{ route('order-list') }}">
                     <i class="fa fa-circle-o"></i> Danh sách yêu cầu báo giá</a>

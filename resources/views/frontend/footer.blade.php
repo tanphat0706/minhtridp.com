@@ -14,7 +14,7 @@
                                     <i class="fa fa-clock-o"></i>
                                 </div>
                                 <div class="col-xs-11 no-padding">
-                                    <div class="bold">Thứ hai –Thứ bảy: <span>08:00 – 18:00</span>
+                                    <div class="bold">Thứ 2 –Thứ 7: <span>08:00 – 18:00</span>
                                     </div><p></p>
                                     <div class="bold">Chủ nhật: <span>09:00 - 13:00</span>
                                     </div>
@@ -45,8 +45,8 @@
                                     <i class="fa fa-map-marker text-center"></i>
                                 </div>
                                 <div class="col-xs-11 col-sm-10 no-padding">
-                                    <span class="bold">208 Lý Thái Tổ</span>
-                                    <br>Phường 1, Quận 3<br>Thành phố Hồ Chí Minh
+                                    <span class="bold">Văn phòng</span>
+                                    <br>208 Lý Thái Tổ, Phường 1<br>Quận 3, TP.Hồ Chí Minh
                                 </div>
                             </div>
                         </div>
@@ -198,11 +198,10 @@
                         </div>
 
                         <div class="iso-text">
-                            <span>CTY TNHH MTV Thiết Kế In Ấn Quảng Cáo Minh Trí </span>
-                            <br>
+                            <span>CTY TNHH Một Thành Viên</span><br>
+                            <span>Thiết Kế In Ấn Quảng Cáo Minh Trí </span>
                             <br>
                             <span>MST: 0313 655 452</span><br>
-                            <br>
                             <span>www.minhtridp.com</span>
                         </div>
                     </div>
@@ -212,20 +211,20 @@
         <div class="bottom-bar hidden-sm">
             <div class="container">
                 <div class="row">
-                    <div class="logo col-sm-2" style="margin: 5px 0;">
+                    <div class="logo col-sm-2">
                         <a href="#">
-                            <img style="max-width: 150px" src="{{asset('images/LOGOFullw.svg')}}">
+                            <img style="max-width: 150px" src="{{asset('images/LOGOfooter.svg')}}">
                         </a>
                     </div>
-                    <div class="bold col-sm-2  hidden-xs" style="margin: 10px 0;">
+                    <div class="bold col-sm-2  hidden-xs">
                         <p><span class="bold">© Copyright 2017</span></p>
                     </div>
                     <div class="col-md-7 col-lg-6 payment-row">
                         <div class="payment-box">
-                            <div class="col-md-3 col-lg-4 col-lg-offset-2 hidden-xs no-padding" style="margin-top: 10px">
+                            <div class="col-md-3 col-lg-4 col-lg-offset-3 hidden-xs no-padding">
                                 <span class="we-accept" style="float: right">Chấp nhận thanh toán</span>
                             </div>
-                            <div class="col-lg-6 no-padding">
+                            <div class="col-lg-5 no-padding">
                                 <div class="hidden-xs right">
                                     <div class="row">
                                         <div class="payment-cards card1"></div>
