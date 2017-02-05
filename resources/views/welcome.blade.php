@@ -208,7 +208,7 @@
                                             Chủ nhật: 09:00-13:-00
                                         </div>
                                         <div class="info">
-                                            <p>Nhằm tạo thuận lợi cho công việc của Quý khách. Ngoài giờ làm việc, Quý khách vẫn có thể đặt hàng tại website hoặc gửi yêu cầu đến email của chúng tôi.<br> Chúng tôi sẽ phản hồi trong thời gian sớm nhất</p>
+                                            <p>Nhằm tạo thuận lợi cho công việc của Quý khách. Ngoài giờ làm việc, Quý khách vẫn có thể đặt hàng tại website hoặc gửi yêu cầu đến email của chúng tôi. Chúng tôi sẽ phản hồi trong thời gian sớm nhất</p>
                                         </div>
                                     </div>
                                     <img alt=""

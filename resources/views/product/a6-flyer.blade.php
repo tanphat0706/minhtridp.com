@@ -87,6 +87,7 @@
 
     </div>
     <div class="container cate-list no-padding">
+        {!! Form::open(['route'=>['bao-gia'], 'method'=> 'POST', 'class' => 'product-form']) !!}
         <div class="col-md-6">
             <div class="detail-product-img">
                 <img class="img-reponsive" src="{{asset('images/products/a6-flyer.png')}}" >
@@ -97,6 +98,8 @@
                     <p><b style="color: #5f9f3b">Số mặt: </b><b id="option_1"></b></p>
                     <p><b style="color: #5f9f3b">Cán màng: </b><b id="option_2"></b></p>
                     <p><b style="color: #5f9f3b">Số lượng: </b><b id="quantity"></b></p>
+                    <br>
+                    <p style="max-width: 100%;overflow: hidden"><input class="btn btn-primary-dark-grey" type="submit" value="Yêu cầu báo giá"></p>
                 </div>
             </div>
         </div>
@@ -118,7 +121,7 @@
                 </ul>
 
                 <div id="prices-tab" class="tabcontent">
-                    {!! Form::open(['route'=>['bao-gia'], 'method'=> 'POST', 'class' => 'product-form']) !!}
+
                     <input type="hidden" name="product_name" value="A6 Flyers & Leaflets">
                     <div class="row">
                             <div class="col-md-12 product-option-div">
@@ -160,12 +163,10 @@
                                 <label class="btn btn-success">950 cái<input type="radio" value="950" name="qty" id="warning" class="badgebox"></label>
                                 <label class="btn btn-success">1000 cái<input type="radio" value="1000" name="qty" id="danger" class="badgebox"></label>
                             </div>
-                            <div class="col-md-12">
-                                <input class="btn btn-primary-dark-grey" type="submit" value="Yêu cầu báo giá">
-                            </div>
+
                         </div>
                     </div>
-                    {!! Form::close() !!}
+
                 </div>
 
                 <div id="specs-tab" class="tabcontent">
@@ -223,6 +224,7 @@
                 </script>
             </div>
         </div>
+    {!! Form::close() !!}
     </div>
 
 
