@@ -93,7 +93,6 @@ class ProductController extends Controller
 
     public function bao_gia(Request $request)
     {
-        if(\Auth::user()){
             $param = $request->all();
             $order = [];
             if (Auth::user()) {
@@ -108,9 +107,6 @@ class ProductController extends Controller
                 \Session::flash('error', 'Vui lòng đăng nhập trước khi yêu cầu báo giá !');
                 return redirect()->back();
             }
-        }else{
-            return redirect()->route('frontend');
-        }
 
     }
 }

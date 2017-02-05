@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>{{ trans('system.app_name') }} | Log in</title>
+<title>Minh Trí DP | Đăng nhập</title>
 <!-- Tell the browser to be responsive to screen width -->
 <meta
     content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
@@ -29,7 +29,8 @@
 <body class="login-page">
     <div class="login-box">
         <div class="login-logo">
-            <b style="color: #000;"> {{ trans('system.app_name') }} | {{ trans('auth.login') }}</b>
+            <b style="color: #000;"> Minh Trí DP </b>
+            <p>Đăng nhập</p>
         </div>
         <!-- /.login-logo -->
         <div class="login-box-body">
@@ -67,9 +68,8 @@
                     <!-- /.col -->
                 </div>
             {{ Form::close() }}
-
-                     <a href="{{ url('admin/password/reset') }}">{{ trans('auth.forget_password') }}</a><br>
-
+                     {{--<a href="{{ url('admin/password/reset') }}">{{ trans('auth.forget_password') }}</a><br>--}}
+                <a href="{{ url('register') }}"><b>Đăng ký tài khoản</b></a><br>
         </div>
         <!-- /.login-box-body -->
     </div>
