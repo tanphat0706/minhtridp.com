@@ -1,5 +1,5 @@
 @extends('frontend.template')
-@section('title', 'Minh Trí DP | In Offset & In Nhanh KTS Chҩt lượng Nhanh chóng Giá rẻ')
+@section('title', 'Minh Trí DP | In Offset & In Nhanh KTS Chất lượng Nhanh chóng Giá rẻ')
 @section('content')
     <div id="home-page" class="ng-scope">
         <div class="home-slider hero-unit">
@@ -35,7 +35,7 @@
                                             <div class="info ng-binding"><p><?php echo $cate->home_description ?></p>
                                             </div>
                                             <div class="btn btn-primary-dark-grey">
-                                                <a href="#booklets/">{{$cate->name}}</a>
+                                                <a href="#booklets/">{{$cate->name}} <i class="fa fa-angle-double-right"></i></a>
                                             </div>
                                         </div>
                                     </div>
@@ -154,7 +154,7 @@
                                     <br>
                                     <div class="col-xs-12">
                                         <div class="row">
-                                            <a href="#sample-products" class="btn btn-primary btn-lg ">Request a free
+                                            <a href="#sample-products" class="btn btn-primary-dark-grey btn-lg ">Request a free
                                                 sample pack</a>
                                         </div>
                                     </div>
@@ -189,7 +189,7 @@
                                                 Đang cập nhật...
                                             </p></div>
                                         <div class="btn btn-primary-dark-grey">
-                                            <a href="#">Tại sao không ?</a>
+                                            <a href="#">Tại sao không !</a>
                                         </div>
                                     </div>
                                 </div>
@@ -208,7 +208,7 @@
                                             Chủ nhật: 09:00-13:-00
                                         </div>
                                         <div class="info">
-                                            <p>Nhằm tạo thuận lợi cho công việc của Quý khách. Ngoài giờ làm việc, Quý khách vẫn có thểđặt hàng tại website hoặc gửi yêu cầu đến email của chúng tôi. Chúng tôi sẽphản hồi trong thời gian sớm nhất</p>
+                                            <p>Nhằm tạo thuận lợi cho công việc của Quý khách. Ngoài giờ làm việc, Quý khách vẫn có thể đặt hàng tại website hoặc gửi yêu cầu đến email của chúng tôi.<br> Chúng tôi sẽ phản hồi trong thời gian sớm nhất</p>
                                         </div>
                                     </div>
                                     <img alt=""
@@ -224,15 +224,14 @@
                                     <div class="details">
                                         <div class="product-title col-xs-12 brand-text">Thông tin liên hệ</div>
                                         <div class="info useful">
-                                            <p><span class="product-title-mini">Bộ phận kinh doanh |</span><a
-                                                        href="#">sale@minhtridp.com</a><br>
-                                                Để giải đáp những thắc mắc về đơn hàng hoặc yêu cầu báo giá, Quý khách vui lòng liên hệ bộphận kinh doanh thông qua email trên.
+                                            <p><span class="product-title-mini">Bộ phận kinh doanh | </span><a
+                                                        href="#">sales@minhtridp.com</a><br>
+                                                Để giải đáp những thắc mắc về đơn hàng hoặc yêu cầu báo giá, Quý khách vui lòng liên hệ bộ phận kinh doanh thông qua email trên.
                                             </p>
-                                            <p><span class="product-title-mini">Bộ phận thiết kế |</span><a
-                                                        href="#">sale@minhtridp.com</a><br>
+                                            <p><span class="product-title-mini">Bộ phận thiết kế |</span><br>
                                                 Đang cập nhật...
                                             </p>
-                                            <p><span class="product-title-mini">Chăm sóc khách hàng |</span><a
+                                            <p><span class="product-title-mini">Chăm sóc khách hàng | </span><a
                                                         href="#">minhtridp@gmail.com</a><br>
                                                 Đang cập nhật...
                                             </p>

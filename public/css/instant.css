@@ -5957,7 +5957,7 @@ b, strong {
     font-size: 15pt;
     font-weight: 600;
     color: #555;
-    line-height: 1
+    line-height: 30px;
 }
 
 .home-offers-carousel .product-cont .bg .details .info {
@@ -8471,7 +8471,7 @@ h6, .h6 {
 }
 
 .btn-primary-dark-grey {
-    background: #474c52;
+    background: #5f9f3b;
     color: #fff;
     text-decoration: none;
     padding: 10px
@@ -8482,7 +8482,7 @@ h6, .h6 {
 }
 
 .btn-primary-dark-grey:hover, .btn-primary-dark-grey:focus {
-    background: #232629;
+    background: #3c7d17;
     color: #fff;
     text-decoration: none
 }

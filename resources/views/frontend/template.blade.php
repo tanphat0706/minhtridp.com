@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>@yield('title', '') | {{ trans('system.app_name') }}</title>
+    <title>@yield('title', '')</title>
     <link href="{{asset('css/instant.css')}}" rel="stylesheet">
     <link href="{{asset('css/style-frontend.css')}}" rel="stylesheet">
     <link rel="shortcut icon" href="{{asset('favicon.ico')}}">

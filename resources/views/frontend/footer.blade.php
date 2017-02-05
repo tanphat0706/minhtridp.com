@@ -13,9 +13,9 @@
                                 <div class="col-xs-1 no-padding">
                                     <i class="fa fa-clock-o"></i>
                                 </div>
-                                <div class="col-xs-11 no-padding">
-                                    <div class="bold">Thứ 2 –Thứ 7: <span>08:00 – 18:00</span>
-                                    </div><p></p>
+                                <div class="col-xs-11">
+                                    <div class="bold">Thứ 2 – Thứ 7: <span>08:00 – 18:00</span>
+                                    </div>
                                     <div class="bold">Chủ nhật: <span>09:00 - 13:00</span>
                                     </div>
                                 </div>
@@ -25,7 +25,7 @@
                                 <div class="col-xs-1 no-padding">
                                     <i class="fa fa-phone"></i>
                                 </div>
-                                <div class="col-xs-11 col-sm-10 no-padding">
+                                <div class="col-xs-11 col-sm-10">
                                     <a href="#" class="bold wt-identifier wti_phonecall">(08) 3830 2298<br></a>
                                 </div>
                             </div>
@@ -34,7 +34,7 @@
                                 <div class="col-xs-1 no-padding">
                                     <i class="fa fa-envelope"></i>
                                 </div>
-                                <div class="col-xs-11 col-sm-10 no-padding">
+                                <div class="col-xs-11 col-sm-10">
                                     <a class="bold break-word wt-identifier" href="mailto:sales@minhtridp.com ">
                                         <span>sales@minhtridp.com </span>
                                     </a>
@@ -44,9 +44,9 @@
                                 <div class="col-xs-1 no-padding">
                                     <i class="fa fa-map-marker text-center"></i>
                                 </div>
-                                <div class="col-xs-11 col-sm-10 no-padding">
+                                <div class="col-xs-11 col-sm-10">
                                     <span class="bold">Văn phòng</span>
-                                    <br>208 Lý Thái Tổ, Phường 1<br>Quận 3, TP.Hồ Chí Minh
+                                    <br>208 Lý Thái Tổ, Phường 1,<br>Quận 3, TP.Hồ Chí Minh
                                 </div>
                             </div>
                         </div>
@@ -198,8 +198,7 @@
                         </div>
 
                         <div class="iso-text">
-                            <span>CTY TNHH Một Thành Viên</span><br>
-                            <span>Thiết Kế In Ấn Quảng Cáo Minh Trí </span>
+                            <span>CTY TNHH MTV Thiết Kế In Ấn Quảng Cáo Minh Trí </span>
                             <br>
                             <span>MST: 0313 655 452</span><br>
                             <span>www.minhtridp.com</span>
@@ -211,12 +210,12 @@
         <div class="bottom-bar hidden-sm">
             <div class="container">
                 <div class="row">
-                    <div class="logo col-sm-2">
+                    <div class="logo col-sm-2" style="max-width:160px">
                         <a href="#">
-                            <img style="max-width: 150px" src="{{asset('images/LOGOfooter.svg')}}">
+                            <img style="max-width: 120px" src="{{asset('images/LOGOfooter.svg')}}">
                         </a>
                     </div>
-                    <div class="bold col-sm-2  hidden-xs">
+                    <div class="bold col-sm-2 hidden-xs">
                         <p><span class="bold">© Copyright 2017</span></p>
                     </div>
                     <div class="col-md-7 col-lg-6 payment-row">
