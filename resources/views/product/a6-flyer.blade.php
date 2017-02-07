@@ -1,5 +1,5 @@
 @extends('frontend.template')
-@section('title', trans('category.a6-flyer-leaflet'))
+@section('title', 'Tờ rơi A4 | Minh Trí DP')
 
 @section('content')
     <style>
