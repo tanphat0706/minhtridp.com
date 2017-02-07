@@ -65,12 +65,12 @@
                 <ol class="breadcrumb no-margins hidden-xs">
                     <li>
                         <a href="#"><i class="fa fa-home"></i>
-                            <span class="ng-hide">Home</span>
+                            <span class="ng-hide">Trang chủ</span>
                         </a>
                     </li>
                     <li>
                         <a href="/booklets">
-                            <span>Booklets</span>
+                            <span>Tờ rơi A4</span>
                         </a>
                     </li>
                 </ol>
@@ -78,7 +78,7 @@
                 <ol class="breadcrumb no-margins visible-xs">
                     <li><a href="#"><i class="fa icon-angle-left"></i></a></li>
                     <li>
-                        Booklets
+                        Tờ rơi A4
                     </li>
                 </ol>
 
@@ -94,10 +94,12 @@
             </div>
             <div class="detail-product-left">
                 <div class="product-summary">
-                    <h3>Product summary</h3>
+                    <h3>Chi Tiết Đơn Hàng</h3>
+                    <hr>
                     <p><b style="color: #5f9f3b">Số mặt: </b><b id="option_1"></b></p>
                     <p><b style="color: #5f9f3b">Cán màng: </b><b id="option_2"></b></p>
                     <p><b style="color: #5f9f3b">Số lượng: </b><b id="quantity"></b></p>
+
                     <br>
                     <p style="max-width: 100%;overflow: hidden"><input class="btn btn-primary-dark-grey" type="submit" value="Yêu cầu báo giá"></p>
                 </div>
