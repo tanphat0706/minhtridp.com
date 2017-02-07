@@ -107,19 +107,19 @@
         </div>
         <div class="col-md-6">
             <div class="product-info">
-                <h1>A6 Flyers & Leaflets</h1>
-                <p>A6 flyers and leaflets are a fun, cost effective alternative to the classic A5. The A6 flyer makes the ideal hand-out; whether you’re promoting a club night, fashion pop-up, fitness class or book club.</p>
-                <p>Our A6 flyers are printed on high quality silk stock and measure up to the size of a postcard. No matter how you choose to use it, the A6 flyer is sure to bring the charm and make an impact. 5000 flyers is currently our most popular run length and currently on sale so why not bag yourself a bargain.
+                <h1>Tờ Rơi A4</h1>
+                <p>Đang cập nhật...</p>
+                <p>
                 </p>
             </div>
             <div class="option-price">
 
-                <h3>Select options</h3>
+                <h3>Chọn thông tin chi tiết cho đơn hàng</h3>
 
                 <ul class="tab">
-                    <li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'prices-tab')" id="defaultOpen">Product detail</a></li>
-                    <li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'specs-tab')">Specs</a></li>
-                    <li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'help-tab')">Help</a></li>
+                    <li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'prices-tab')" id="defaultOpen">Chi tiết</a></li>
+                    <li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'specs-tab')">Quy cách</a></li>
+                    <li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'help-tab')">Hỗ trợ</a></li>
                 </ul>
 
                 <div id="prices-tab" class="tabcontent">
@@ -172,13 +172,18 @@
                 </div>
 
                 <div id="specs-tab" class="tabcontent">
-                    <h3>Specs</h3>
-                    <p>Paris is the capital of France.</p>
+                    <h3>Quy cách chung</h3>
+                    <p>Kích thước: A4 (21 x 29.7 cm) </p>
+                    <p>Kỹ thuật in: Offset 4 màu (CMYK) </p>
+                    <p>Thành phẩm: Theo yêu cầu</p>
+                    <p>Thời gian sản xuất: Từ 1 đến 2 ngày làm việc (*)</p>
+                    <p>Thời gian giao hàng: 1 ngày sau khi hoàn thành</p>
+                    <p><i>(*): Thời gian sản xuất được tính sau khi duyệt mẫu thiết kế</i></p>
                 </div>
 
                 <div id="help-tab" class="tabcontent">
-                    <h3>Help</h3>
-                    <p>Tokyo is the capital of Japan.</p>
+                    <h3>Hỗ trợ</h3>
+                    <p>Đang cập nhật...</p>
                 </div>
 
                 <script>
