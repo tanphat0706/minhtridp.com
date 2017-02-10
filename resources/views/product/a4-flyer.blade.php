@@ -87,21 +87,24 @@
 
     </div>
     <div class="container cate-list no-padding">
-        {!! Form::open(['route'=>['bao-gia'], 'method'=> 'POST', 'class' => 'product-form']) !!}
         <div class="col-md-6">
             <div class="detail-product-img">
-                <img class="img-reponsive" src="{{asset('images/products/a6-flyer.png')}}" >
+                <img class="img-reponsive" src="{{asset('images/products/a4-flyer.png')}}" >
             </div>
             <div class="detail-product-left">
                 <div class="product-summary">
                     <h3>Chi Tiết Đơn Hàng</h3>
                     <hr>
-                    <p><b style="color: #5f9f3b">Số mặt: </b><b id="option_1"></b></p>
+                    <p><b style="color: #5f9f3b">File thiết kế: </b><b id="option_3"></b></p>
+                    <p><b style="color: #5f9f3b">Chất liệu: </b><b id="option_4"></b></p>
+                    <p><b style="color: #5f9f3b">Số mặt in: </b><b id="option_1"></b></p>
                     <p><b style="color: #5f9f3b">Cán màng: </b><b id="option_2"></b></p>
                     <p><b style="color: #5f9f3b">Số lượng: </b><b id="quantity"></b></p>
-
-                    <br>
-                    <p style="max-width: 100%;overflow: hidden"><input class="btn btn-primary-dark-grey" type="submit" value="Yêu cầu báo giá"></p>
+                    <input type="hidden" id="quantity_hidden">
+                    <hr>
+                    <p><i>Yêu cầu của bạn sẽ được xử lý trong 1-2 giờ làm việc.</i></p>
+                    <hr>
+                    <p style="max-width: 100%;overflow: hidden"><input id="yc-bao-gia" class="btn btn-primary-dark-grey" type="button" value="Yêu cầu báo giá"></p>
                 </div>
             </div>
         </div>
@@ -123,53 +126,73 @@
                 </ul>
 
                 <div id="prices-tab" class="tabcontent">
-
-                    <input type="hidden" name="product_name" value="A6 Flyers & Leaflets">
+                    {!! Form::open(['route'=>['bao-gia'], 'method'=> 'POST', 'id'=>'bao-gia' ,'class' => 'product-form']) !!}
+                    <input type="hidden" name="product_name" value="Tờ rơi A4">
                     <div class="row">
-                            <div class="col-md-12 product-option-div">
-                                <div class="select-style left">
-                                    <select name="option1" id="option1">
-                                        <option value="1 mặt">1 mặt</option>
-                                        <option value="2 mặt">2 mặt</option>
-                                    </select>
-                                </div>
-                                <div class="select-style right">
-                                    <select name="option2" id="option2">
-                                        <option value="Cán màng mờ">Cán màng mờ</option>
-                                        <option value="Cán màng bóng">Cán màng bóng</option>
-                                    </select>
-                                </div>
+                        <div class="col-md-6 product-option-div">
+                            <h5>File thiết kế:</h5>
+                            <div class="select-style left">
+                                <select name="option3" id="option3">
+                                    <option value="Có">Có</option>
+                                    <option value="Chưa">Chưa</option>
+                                </select>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <h3>Chọn số lượng:</h3>
+                        <div class="col-md-6 product-option-div">
+                            <h5>Chất liệu:</h5>
+                            <div class="select-style right">
+                                <select name="option4" id="option4">
+                                    <option value="Couche 120">Couche 120</option>
+                                    <option value="Couche 150">Couche 150</option>
+                                    <option value="Couche 200">Couche 200</option>
+                                </select>
                             </div>
-                            <div class="col-md-12 qty-div">
-                                <label class="btn btn-success active">50 cái<input type="radio" checked value="50" name="qty" id="default" class="badgebox"></label>
-                                <label class="btn btn-success">100 cái<input type="radio" value="100" name="qty" id="primary" class="badgebox"></label>
-                                <label class="btn btn-success">150 cái<input type="radio" value="150" name="qty" id="info" class="badgebox"></label>
-                                <label class="btn btn-success">200 cái<input type="radio" value="200" name="qty" id="success" class="badgebox"></label>
-                                <label class="btn btn-success">250 cái<input type="radio" value="250" name="qty" id="warning" class="badgebox"></label>
-                                <label class="btn btn-success">300 cái<input type="radio" value="300" name="qty" id="danger" class="badgebox"></label>
-                                <label class="btn btn-success">350 cái<input type="radio" value="350" name="qty" id="default" class="badgebox"></label>
-                                <label class="btn btn-success">400 cái<input type="radio" value="400" name="qty" id="primary" class="badgebox"></label>
-                                <label class="btn btn-success">550 cái<input type="radio" value="550" name="qty" id="info" class="badgebox"></label>
-                                <label class="btn btn-success">600 cái<input type="radio" value="600" name="qty" id="success" class="badgebox"></label>
-                                <label class="btn btn-success">650 cái<input type="radio" value="650" name="qty" id="warning" class="badgebox"></label>
-                                <label class="btn btn-success">700 cái<input type="radio" value="700" name="qty" id="danger" class="badgebox"></label>
-                                <label class="btn btn-success">750 cái<input type="radio" value="750" name="qty" id="default" class="badgebox"></label>
-                                <label class="btn btn-success">800 cái<input type="radio" value="800" name="qty" id="primary" class="badgebox"></label>
-                                <label class="btn btn-success">850 cái<input type="radio" value="850" name="qty" id="info" class="badgebox"></label>
-                                <label class="btn btn-success">900 cái<input type="radio" value="900" name="qty" id="success" class="badgebox"></label>
-                                <label class="btn btn-success">950 cái<input type="radio" value="950" name="qty" id="warning" class="badgebox"></label>
-                                <label class="btn btn-success">1000 cái<input type="radio" value="1000" name="qty" id="danger" class="badgebox"></label>
-                            </div>
-
                         </div>
                     </div>
+                    <div class="row">
+                        <div class="col-md-6 product-option-div">
+                            <h5>Số mặt in:</h5>
+                            <div class="select-style left">
+                                <select name="option1" id="option1">
+                                    <option value="1 mặt">1 mặt</option>
+                                    <option value="2 mặt">2 mặt</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6 product-option-div">
+                            <h5>Cán màng:</h5>
+                            <div class="select-style right">
+                                <select name="option2" id="option2">
+                                    <option value="Không cán màng">Không cán màng</option>
+                                    <option value="Cán màng bóng">Cán màng bóng</option>
+                                    <option value="Cán màng mờ">Cán màng mờ</option>
+                                    <option value="Cán vân">Cán vân</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="row">
+                            <div class="col-md-12">
+                                <h5>Chọn số lượng:</h5>
+                            </div>
+                            <div class="col-md-12 qty-div">
+                                <label class="btn btn-success active">10 cái<input type="radio" checked value="10" name="qty" id="default" class="badgebox"></label>
+                                <label class="btn btn-success">20 cái<input type="radio" value="20" name="qty" id="primary" class="badgebox"></label>
+                                <label class="btn btn-success">50 cái<input type="radio" value="50" name="qty" id="info" class="badgebox"></label>
+                                <label class="btn btn-success">100 cái<input type="radio" value="100" name="qty" id="success" class="badgebox"></label>
+                                <label class="btn btn-success">1.000 cái<input type="radio" value="1000" name="qty" id="warning" class="badgebox"></label>
+                                <label class="btn btn-success">2.000 cái<input type="radio" value="2000" name="qty" id="danger" class="badgebox"></label>
+                                <label class="btn btn-success">3.000 cái<input type="radio" value="3000" name="qty" id="default" class="badgebox"></label>
+                                <label class="btn btn-success">5.000 cái<input type="radio" value="5000" name="qty" id="primary" class="badgebox"></label>
+                                <label class="btn btn-success">10.000 cái<input type="radio" value="10000" name="qty" id="info" class="badgebox"></label>
+                                <label class="btn btn-success">20.000 cái<input type="radio" value="20000" name="qty" id="success" class="badgebox"></label>
+                            </div>
 
+                        </div>
+                    {!! Form::close() !!}
                 </div>
+
+            </div>
 
                 <div id="specs-tab" class="tabcontent">
                     <h3>Quy cách chung</h3>
@@ -188,8 +211,10 @@
 
                 <script>
                     $(document).ready(function(){
-                        $('#option_1').text($('#option1').val());
-                        $('#option_2').text($('#option2').val());
+                        var i;
+                        for (i = 1; i < 5; ++i) {
+                            $('#option_'+i).text($('#option'+i).val());
+                        }
                         $("#quantity").text($("input[name='qty']").val()+' cái');
                         $("#option1").change(function(){
                             $('#option1 option').each(function() {
@@ -205,15 +230,36 @@
                                 }
                             });
                         });
+                        $("#option3").change(function(){
+                            $('#option3 option').each(function() {
+                                if ($(this).is(':selected')){
+                                    $('#option_3').text($('#option3').val());
+                                }
+                            });
+                        });
+                        $("#option4").change(function(){
+                            $('#option4 option').each(function() {
+                                if ($(this).is(':selected')){
+                                    $('#option_4').text($('#option4').val());
+                                }
+                            });
+                        });
                         $("input[name='qty']").click(function() {
                             if($("input[name='qty']").is(':checked')) {
                                 $("input[name='qty']").parent().removeClass('active');
                                 $(this).parent().addClass('active');
                                 var qty = $(this).val();
-                                $('#quantity').text(qty+' cái');
+                                $('#quantity_hidden').text(qty);
+                                $('#quantity_hidden').number( true, 0);
+                                var qty_2 = $('#quantity_hidden').text();
+                                $('#quantity').text(qty_2+' cái');
                             }
                         });
+                        $('#yc-bao-gia').click(function(){
+                            $('#bao-gia').submit()
+                        });
                     });
+
                     document.getElementById("defaultOpen").click();
                     function openCity(evt, cityName) {
                         var i, tabcontent, tablinks;
@@ -231,7 +277,7 @@
                 </script>
             </div>
         </div>
-    {!! Form::close() !!}
+
     </div>
 
 

@@ -14,7 +14,6 @@
     <script src="{{asset('js/jquery.min.js')}}"></script>
     {{--<script src="{{asset('js/jquery.mobile-1.4.5.min.js')}}"></script>--}}
     <script src="{{asset('css/bootstrap/js/bootstrap.min.js')}}"></script>
-
 </head>
 
 <body>
@@ -63,7 +62,7 @@
 
     {{--FOOTER--}}
     @include('frontend/footer')
-
+    {!! Html::script('js/jquery.number.js') !!}
 </body>
 
 </html>

@@ -99,7 +99,7 @@ class ProductController extends Controller
                 $code = 'ODFD' . substr(str_shuffle(str_repeat("0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ", 6)), 0, 6);
                 $order['user_id'] = Auth::user()->id;
                 $order['order_code'] = $code;
-                $order['content'] = $param['product_name'] . ' - ' . $param['option1'] . ' - ' . $param['option2'] . ' - ' . $param['qty'].' cái';
+                $order['content'] = $param['product_name'] . ' - File thiết kế: ' . $param['option3'] .' - ' . $param['option4'] .' - ' . $param['option1'] . ' - ' . $param['option2'] . ' - ' . $param['qty'].' cái';
                 Order::create($order);
                 \Session::flash('message', 'Chúng tôi sẽ phản hồi quý khách trong vòng 24h, vui lòng vào trang cá nhân để kiểm tra trạng thái !');
                 return redirect()->back();

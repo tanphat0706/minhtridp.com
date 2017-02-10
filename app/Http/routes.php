@@ -49,10 +49,10 @@ Route::group([
             return view('category.flyer-leaflet');
         }
     ]);
-    Route::get('/flyer-leaflet/a6-flyer-leaflet', [
-        'as' => 'a6-flyer',
+    Route::get('/flyer-leaflet/a4-flyer-leaflet', [
+        'as' => 'a4-flyer',
         function () {
-            return view('product.a6-flyer');
+            return view('product.a4-flyer');
         }
     ]);
     Route::get('/trang-ca-nhan', [

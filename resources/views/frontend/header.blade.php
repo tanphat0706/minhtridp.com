@@ -83,7 +83,7 @@
                                             </a>
                                         </li>
                                         <li class="last-li">
-                                            <a href="{{route('a6-flyer')}}" class="wt-identifier wti_productla3">
+                                            <a href="{{route('a4-flyer')}}" class="wt-identifier wti_productla3">
                                                 Tờ rơi A4<i class="fa fa-angle-right pull-right"></i>
                                             </a>
                                         </li>
