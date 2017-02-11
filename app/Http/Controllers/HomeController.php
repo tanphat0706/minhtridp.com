@@ -25,6 +25,18 @@ class HomeController extends Controller
         $cates = Categories::where('status',1)->get();
         return view('welcome',compact('cates'));
     }
+    public function about()
+    {
+        return view('about');
+    }
+    public function contact()
+    {
+        return view('contact');
+    }
+    public function blog()
+    {
+        return view('blog.blog');
+    }
     public function admin()
     {
         return view('admin');

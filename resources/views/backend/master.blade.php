@@ -18,10 +18,6 @@
     {!! Html::style('dist/css/AdminLTE.min.css') !!}
     <!-- AdminLTE Skins. Choose a skin from the css/skins folder instead of downloading all of them to reduce the load. -->
     {!! Html::style('dist/css/skins/_all-skins.min.css') !!}
-    <!-- Morris chart -->
-    {!! Html::style('plugins/morris/morris.css') !!}
-    <!-- jvectormap -->
-    {!! Html::style('js/jvectormap/jquery-jvectormap-1.2.2.css') !!}
     <!-- Date picker -->
     {!! Html::style('plugins/datepicker/datepicker3.css') !!}
     {!! Html::style('plugins/datetimepicker/bootstrap-datetimepicker.min.css') !!}
@@ -123,8 +119,6 @@
 
 <!-- Bootstrap 3.3.6 -->
 {!! Html::script('css/bootstrap/js/bootstrap.min.js') !!}
-<!-- ChartJS 1.0.1 -->
-{!! Html::script('js/chartjs/Chart.min.js') !!}
 <!-- bootbox for show message -->
 {!! Html::script('css/bootstrap/js/bootbox.min.js') !!}
 <!-- Select2 -->
@@ -160,18 +154,10 @@
 {!! Html::script('plugins/fancybox/helpers/jquery.fancybox-media.js') !!}
 {!! Html::script('plugins/fancybox/helpers/jquery.fancybox-thumbs.js') !!}
 {!! Html::script('plugins/iCheck/icheck.min.js') !!}
-{!! Html::script('js/jvectormap/jquery-jvectormap-1.2.2.min.js') !!}
-{!! Html::script('js/jvectormap/jquery-jvectormap-world-mill-en.js') !!}
 <!-- page script -->
-{!! Html::script('js/map.js') !!}
 {!! Html::script('js/main.js') !!}
-{!! Html::script('js/file.js') !!}
 {!! Html::script('js/jquery.number.js') !!}
 {!! Html::script('plugins/ckeditor/ckeditor.js') !!}
-{!! Html::script('file/js/fileinput.js') !!}
-{!! Html::script('file/js/fileinput_locale_fr.js') !!}
-{!! Html::script('file/js/fileinput_locale_es.js') !!}
-{!! Html::script('js/drag-drop-items.js') !!}
 {!! Html::script('js/easyResponsiveTabs.js') !!}
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
     function hideURLbar(){ window.scrollTo(0,1); } </script>
@@ -213,7 +199,6 @@
     @yield('js')
     @yield('datatable-js')
 </script>
-
 <!-- Modal -->
 </body>
 </html>

@@ -63,6 +63,7 @@
     {{--FOOTER--}}
     @include('frontend/footer')
     {!! Html::script('js/jquery.number.js') !!}
+    <script src='//cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.4.5/js/bootstrapvalidator.min.js'></script>
 </body>
 
 </html>

@@ -149,6 +149,13 @@ class OrderController extends Controller
         \Session::flash('message','Cảm ơn vì đã phản ánh về dịch vụ của chúng tôi ! Xin cảm ơn.');
         return redirect()->route('my-page');
     }
+    public function needHelp(Request $request){
+        $param = $request->all();
+        $data = array('name' => $param['ht_name'], 'phone' =>$param['ht_phone'], 'mail' => $param['ht_email'], 'content' =>$param['ht_content']);
+        $this->sendMailNeedHelp($data, $param['ht_email'], 'Yêu cầu hỗ trợ');
+        \Session::flash('message','Cảm ơn vì đã liên hệ chúng tôi ! Xin cảm ơn.');
+        return redirect()->back();
+    }
     /**
      * Send mail for user
      *
@@ -160,6 +167,14 @@ class OrderController extends Controller
         \Mail::send('emails.confirm', $data, function ($message) use ($mail, $subject) {
             $message->from(env('MAIL_FROM_ADMIN'), env('MAIL_NAME_ADMIN'));
             $message->to($mail)
+                ->subject($subject);
+        });
+    }
+    protected function sendMailNeedHelp($data, $mail, $subject)
+    {
+        \Mail::send('emails.help', $data, function ($message) use ($mail, $subject) {
+            $message->from($mail, $mail);
+            $message->to('letanphat0706@gmail.com')
                 ->subject($subject);
         });
     }

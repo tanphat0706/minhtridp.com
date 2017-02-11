@@ -2,63 +2,6 @@
 @section('title', 'Tờ rơi A4 | Minh Trí DP')
 
 @section('content')
-    <style>
-        ul.tab {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-            background-color: #fff;
-        }
-
-        /* Float the list items side by side */
-        ul.tab li {float: left;}
-        {
-            color: #353535;
-        }
-        /* Style the links inside the list items */
-        ul.tab li a {
-            display: inline-block;
-            color: #bbb;
-            font-weight: bold;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-            transition: 0.3s;
-            font-size: 17px;
-        }
-
-        /* Change background color of links on hover */
-        ul.tab li a:hover,ul.tab li a.active{
-            background-color: #f1f1f1;
-            color: #353535;
-        }
-
-        /* Create an active/current tablink class */
-        ul.tab li a:focus, .active {
-            color: #353535;
-            background-color: #f1f1f1;
-        }
-
-        /* Style the tab content */
-        .tabcontent {
-            background-color: #f1f1f1;
-            display: none;
-            padding: 6px 12px;
-            -webkit-animation: fadeEffect 1s;
-            animation: fadeEffect 1s;
-        }
-
-        @-webkit-keyframes fadeEffect {
-            from {opacity: 0;}
-            to {opacity: 1;}
-        }
-
-        @keyframes fadeEffect {
-            from {opacity: 0;}
-            to {opacity: 1;}
-        }
-    </style>
     <div class="container hidden-xs breadcrumb no-padding">
         <div class="row">
             <div class="col-md-12">
@@ -84,9 +27,8 @@
 
             </div>
         </div>
-
     </div>
-    <div class="container cate-list no-padding">
+    <div id="detail-product" class="container cate-list no-padding">
         <div class="col-md-6">
             <div class="detail-product-img">
                 <img class="img-reponsive" src="{{asset('images/products/a4-flyer.png')}}" >
@@ -113,6 +55,9 @@
                 <h1>Tờ Rơi A4</h1>
                 <p>Đang cập nhật...</p>
                 <p>
+                    <a href="javascript:void(0)" data-toggle="tooltip" title="Dịch vụ giao hàng tận nơi">
+                        Dịch vụ giao hàng tận nơi
+                    </a>
                 </p>
             </div>
             <div class="option-price">
@@ -206,79 +151,45 @@
 
                 <div id="help-tab" class="tabcontent">
                     <h3>Hỗ trợ</h3>
-                    <p>Đang cập nhật...</p>
+                    <form id="hotro" class="form-horizontal" action="{{route('needhelp')}}">
+                        <div class="form-group">
+                            <label class="control-label col-sm-3" for="pwd">Họ & Tên:</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" name="ht_name" id="ht-name">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-3" for="pwd">Điện thoại:</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" name="ht_phone" id="ht-phone">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-3" for="email">Email:</label>
+                            <div class="col-sm-9">
+                                <input type="email" class="form-control" name="ht_email" id="ht-email">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-3" for="content">Nội dung:</label>
+                            <div class="col-sm-9">
+                                <textarea class="form-control" rows="3" name="ht_content" id="ht-content"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-12">
+                                <button type="submit" class="btn btn-primary-dark-grey">Gửi hỗ trợ</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
 
                 <script>
-                    $(document).ready(function(){
-                        var i;
-                        for (i = 1; i < 5; ++i) {
-                            $('#option_'+i).text($('#option'+i).val());
-                        }
-                        $("#quantity").text($("input[name='qty']").val()+' cái');
-                        $("#option1").change(function(){
-                            $('#option1 option').each(function() {
-                                if ($(this).is(':selected')){
-                                    $('#option_1').text($('#option1').val());
-                                }
-                            });
-                        });
-                        $("#option2").change(function(){
-                            $('#option2 option').each(function() {
-                                if ($(this).is(':selected')){
-                                    $('#option_2').text($('#option2').val());
-                                }
-                            });
-                        });
-                        $("#option3").change(function(){
-                            $('#option3 option').each(function() {
-                                if ($(this).is(':selected')){
-                                    $('#option_3').text($('#option3').val());
-                                }
-                            });
-                        });
-                        $("#option4").change(function(){
-                            $('#option4 option').each(function() {
-                                if ($(this).is(':selected')){
-                                    $('#option_4').text($('#option4').val());
-                                }
-                            });
-                        });
-                        $("input[name='qty']").click(function() {
-                            if($("input[name='qty']").is(':checked')) {
-                                $("input[name='qty']").parent().removeClass('active');
-                                $(this).parent().addClass('active');
-                                var qty = $(this).val();
-                                $('#quantity_hidden').text(qty);
-                                $('#quantity_hidden').number( true, 0);
-                                var qty_2 = $('#quantity_hidden').text();
-                                $('#quantity').text(qty_2+' cái');
-                            }
-                        });
-                        $('#yc-bao-gia').click(function(){
-                            $('#bao-gia').submit()
-                        });
-                    });
 
-                    document.getElementById("defaultOpen").click();
-                    function openCity(evt, cityName) {
-                        var i, tabcontent, tablinks;
-                        tabcontent = document.getElementsByClassName("tabcontent");
-                        for (i = 0; i < tabcontent.length; i++) {
-                            tabcontent[i].style.display = "none";
-                        }
-                        tablinks = document.getElementsByClassName("tablinks");
-                        for (i = 0; i < tablinks.length; i++) {
-                            tablinks[i].className = tablinks[i].className.replace(" active", "");
-                        }
-                        document.getElementById(cityName).style.display = "block";
-                        evt.currentTarget.className += " active";
-                    }
                 </script>
             </div>
         </div>
 
     </div>
-
-
+    {!! Html::script('js/frontend.js') !!}
 @endsection

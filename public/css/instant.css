@@ -3257,7 +3257,7 @@ textarea.input-group-sm > .form-control, textarea.input-group-sm > .input-group-
 }
 
 .navbar-collapse {
-    max-height: 360px;
+    /*max-height: 360px;*/
     overflow-x: visible;
     padding-right: 15px;
     padding-left: 15px;

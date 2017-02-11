@@ -23,6 +23,18 @@ Route::group([
     Route::get('/index', function () {
         return redirect()->route('frontend');
     });
+    Route::get('/gioi-thieu', [
+        'as' => 'gioi-thieu',
+        'uses' => 'HomeController@about'
+    ]);
+    Route::get('/lien-he', [
+        'as' => 'lien-he',
+        'uses' => 'HomeController@contact'
+    ]);
+    Route::get('/tin-tuc', [
+        'as' => 'tin-tuc',
+        'uses' => 'HomeController@blog'
+    ]);
     Route::get('/login', [
         'as' => 'login',
         'uses' => 'Auth\AuthController@getLogin'
@@ -74,6 +86,10 @@ Route::group([
     Route::get('/notagree', [
         'as' => 'notagree',
         'uses' => 'OrderController@notagree'
+    ]);
+    Route::get('/needhelp', [
+        'as' => 'needhelp',
+        'uses' => 'OrderController@needHelp'
     ]);
 });
 

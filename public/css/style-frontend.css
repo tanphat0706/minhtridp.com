@@ -21,6 +21,12 @@
     #home-page .home-slider .carousel-inner .item .container{
         padding: 0;
     }
+    .product-info{
+        margin-top: 25px;
+    }
+    #detail-product .btn{
+        font-size: 11pt;
+    }
 }
 @media (min-width: 769px) {
     .qty-div .btn{
@@ -157,14 +163,19 @@
 
 .cate-list .btn-primary-dark-grey {
     width: 100%;
-    height: 50px;
+    height: 35px;
     padding: 5px 10px;
-    font-size: 15pt;
+    font-size: 12pt;
     /*text-align: left;*/
     /*position: absolute;*/
     /*bottom: 0;*/
 }
-
+#detail-product .btn-primary-dark-grey {
+    width: 100%;
+    height: 50px;
+    padding: 5px 10px;
+    font-size: 14pt;
+}
 .banner-right {
     padding-right: 0;
     padding-left: 25px;
@@ -271,9 +282,10 @@
     margin-right: 0px;
 }
 .qty-div .btn-success.active{
-    background: #474c52;
+    background: #3c7d17;
 }
 .product-option-div{
+    overflow: hidden;
     margin-top: 15px;
 }
 #prices-tab .btn-primary-dark-grey{
@@ -310,4 +322,53 @@
 }
 .don-hang-tbl .btn{
     font-size: 12px;
+}
+#detail-product ul.tab {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #fff;
+}
+/* Float the list items side by side */
+#detail-product ul.tab li {float: left;}
+{
+    color: #353535;
+}
+/* Style the links inside the list items */
+#detail-product ul.tab li a {
+    display: inline-block;
+    color: #bbb;
+    font-weight: bold;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 17px;
+}
+/* Change background color of links on hover */
+#detail-product ul.tab li a:hover, #detail-product ul.tab li a.active{
+    background-color: #f1f1f1;
+    color: #353535;
+}
+/* Create an active/current tablink class */
+/*#detail-product ul.tab li a:focus, #detail-product .active {*/
+    /*color: #353535;*/
+    /*background-color: #f1f1f1;*/
+/*}*/
+/* Style the tab content */
+#detail-product .tabcontent {
+    background-color: #f1f1f1;
+    display: none;
+    padding: 6px 12px;
+    -webkit-animation: fadeEffect 1s;
+    animation: fadeEffect 1s;
+}
+@-webkit-keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
 }

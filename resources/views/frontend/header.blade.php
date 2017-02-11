@@ -9,11 +9,13 @@
                     <div class="col-sm-8 col-md-8 nav-control-options">
                         <ul class="nav nav-pills">
                             <li>
-                                <a href="#business-boost"
-                                   title="Blog"><span>Liên hệ</span></a>
+                                <a href="{{route('tin-tuc')}}"><span>Tin tức</span></a>
                             </li>
                             <li>
-                                <a href="#contact-us">Giới thiệu</a>
+                                <a href="{{route('lien-he')}}"><span>Liên hệ</span></a>
+                            </li>
+                            <li>
+                                <a href="{{route('gioi-thieu')}}">Giới thiệu</a>
                             </li>
                             @if(\Auth::check())
                                 <li class="dropdown toggle-with-hover">
@@ -151,6 +153,15 @@
                             </div>
                             <div class="col-xs-12">
                                 <span><a href="#">Khuyến Mãi & CSKH</a></span>
+                            </div>
+                            <div class="col-xs-12">
+                                <span><a href="{{route('tin-tuc')}}">Tin tức</a></span>
+                            </div>
+                            <div class="col-xs-12">
+                                <span><a href="{{route('lien-he')}}">Liên hệ</a></span>
+                            </div>
+                            <div class="col-xs-12">
+                                <span><a href="{{route('gioi-thieu')}}">Giới thiệu</a></span>
                             </div>
                         </div>
                         <div class="row">
