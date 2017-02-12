@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../laravel_img/.idea/demo_ecommerce.iml" filepath="$PROJECT_DIR$/../laravel_img/.idea/demo_ecommerce.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/minhtridp.iml" filepath="$PROJECT_DIR$/.idea/minhtridp.iml" />
     </modules>
   </component>

@@ -2286,7 +2286,7 @@ textarea.input-lg, select[multiple].input-lg {
 
 .btn-success {
     color: #fff;
-    background-color: #5cb85c;
+    background-color: #5f9f3b;
     border-color: #4cae4c
 }
 
@@ -5703,7 +5703,7 @@ label.btn-select-label {
 }
 
 b, strong {
-    color: #444
+    color: #656565
 }
 
 .smll-light {

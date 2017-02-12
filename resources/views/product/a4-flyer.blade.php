@@ -37,11 +37,11 @@
                 <div class="product-summary">
                     <h3>Chi Tiết Đơn Hàng</h3>
                     <hr>
-                    <p><b style="color: #5f9f3b">File thiết kế: </b><b id="option_3"></b></p>
-                    <p><b style="color: #5f9f3b">Chất liệu: </b><b id="option_4"></b></p>
-                    <p><b style="color: #5f9f3b">Số mặt in: </b><b id="option_1"></b></p>
-                    <p><b style="color: #5f9f3b">Cán màng: </b><b id="option_2"></b></p>
-                    <p><b style="color: #5f9f3b">Số lượng: </b><b id="quantity"></b></p>
+                    <p><b style="font-style: normal; color: #5f9f3b">File thiết kế: </b><b id="option_3"></b></p>
+                    <p><b style="font-style: normal; color: #5f9f3b">Chất liệu: </b><b id="option_4"></b></p>
+                    <p><b style="font-style: normal; color: #5f9f3b">Số mặt in: </b><b id="option_1"></b></p>
+                    <p><b style="font-style: normal; color: #5f9f3b">Cán màng: </b><b id="option_2"></b></p>
+                    <p><b style="font-style: normal; color: #5f9f3b">Số lượng: </b><b id="quantity"></b></p>
                     <input type="hidden" id="quantity_hidden">
                     <hr>
                     <p><i>Yêu cầu của bạn sẽ được xử lý trong 1-2 giờ làm việc.</i></p>
@@ -61,8 +61,7 @@
                 </p>
             </div>
             <div class="option-price">
-
-                <h3>Chọn thông tin chi tiết cho đơn hàng</h3>
+                <h5>Chọn thông tin chi tiết cho đơn hàng</h5>
 
                 <ul class="tab">
                     <li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'prices-tab')" id="defaultOpen">Chi tiết</a></li>
@@ -78,8 +77,8 @@
                             <h5>File thiết kế:</h5>
                             <div class="select-style left">
                                 <select name="option3" id="option3">
-                                    <option value="Có">Có</option>
-                                    <option value="Chưa">Chưa</option>
+                                    <option value="Đã có">Đã có</option>
+                                    <option value="Chưa có">Chưa có</option>
                                 </select>
                             </div>
                         </div>
@@ -121,16 +120,16 @@
                                 <h5>Chọn số lượng:</h5>
                             </div>
                             <div class="col-md-12 qty-div">
-                                <label class="btn btn-success active">10 cái<input type="radio" checked value="10" name="qty" id="default" class="badgebox"></label>
-                                <label class="btn btn-success">20 cái<input type="radio" value="20" name="qty" id="primary" class="badgebox"></label>
-                                <label class="btn btn-success">50 cái<input type="radio" value="50" name="qty" id="info" class="badgebox"></label>
-                                <label class="btn btn-success">100 cái<input type="radio" value="100" name="qty" id="success" class="badgebox"></label>
-                                <label class="btn btn-success">1.000 cái<input type="radio" value="1000" name="qty" id="warning" class="badgebox"></label>
-                                <label class="btn btn-success">2.000 cái<input type="radio" value="2000" name="qty" id="danger" class="badgebox"></label>
-                                <label class="btn btn-success">3.000 cái<input type="radio" value="3000" name="qty" id="default" class="badgebox"></label>
-                                <label class="btn btn-success">5.000 cái<input type="radio" value="5000" name="qty" id="primary" class="badgebox"></label>
-                                <label class="btn btn-success">10.000 cái<input type="radio" value="10000" name="qty" id="info" class="badgebox"></label>
-                                <label class="btn btn-success">20.000 cái<input type="radio" value="20000" name="qty" id="success" class="badgebox"></label>
+                                <label class="btn btn-success active">10<br><i>tờ</i><br><input type="radio" checked value="10" name="qty" id="default" class="badgebox"></label>
+                                <label class="btn btn-success">20<br><i>tờ</i><br><input type="radio" value="20" name="qty" id="primary" class="badgebox"></label>
+                                <label class="btn btn-success">50<br><i>tờ</i><br><input type="radio" value="50" name="qty" id="info" class="badgebox"></label>
+                                <label class="btn btn-success">100<br><i>tờ</i><br><input type="radio" value="100" name="qty" id="success" class="badgebox"></label>
+                                <label class="btn btn-success">1000<br><i>tờ</i><br><input type="radio" value="1000" name="qty" id="warning" class="badgebox"></label>
+                                <label class="btn btn-success">2000<br><i>tờ</i><br><input type="radio" value="2000" name="qty" id="danger" class="badgebox"></label>
+                                <label class="btn btn-success">3000<br><i>tờ</i><br><input type="radio" value="3000" name="qty" id="default" class="badgebox"></label>
+                                <label class="btn btn-success">5000<br><i>tờ</i><br><input type="radio" value="5000" name="qty" id="primary" class="badgebox"></label>
+                                <label class="btn btn-success">10000<br><i>tờ</i><br><input type="radio" value="10000" name="qty" id="info" class="badgebox"></label>
+                                <label class="btn btn-success">20000<br><i>tờ</i><br><input type="radio" value="20000" name="qty" id="success" class="badgebox"></label>
                             </div>
 
                         </div>
