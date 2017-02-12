@@ -42,7 +42,7 @@
                     <p><b style="font-style: normal; color: #5f9f3b">Số mặt in: </b><b id="option_1"></b></p>
                     <p><b style="font-style: normal; color: #5f9f3b">Cán màng: </b><b id="option_2"></b></p>
                     <p><b style="font-style: normal; color: #5f9f3b">Số lượng: </b><b id="quantity"></b></p>
-                    <input type="hidden" id="quantity_hidden">
+                    {{--<input type="hidden" id="quantity_hidden">--}}
                     <hr>
                     <p><i>Yêu cầu của bạn sẽ được xử lý trong 1-2 giờ làm việc.</i></p>
                     <hr>

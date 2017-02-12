@@ -90,7 +90,7 @@ $(document).ready(function(){
     for (i = 1; i < 5; ++i) {
         $('#option_'+i).text($('#option'+i).val());
     }
-    $("#quantity").text($("input[name='qty']").val()+' cái');
+    $("#quantity").text($("input[name='qty']").val()+' tờ');
     $("#option1").change(function(){
         $('#option1 option').each(function() {
             if ($(this).is(':selected')){
@@ -124,10 +124,11 @@ $(document).ready(function(){
             $("input[name='qty']").parent().removeClass('active');
             $(this).parent().addClass('active');
             var qty = $(this).val();
-            $('#quantity_hidden').text(qty);
-            $('#quantity_hidden').number( true, 0);
-            var qty_2 = $('#quantity_hidden').text();
-            $('#quantity').text(qty_2+' cái');
+            $('#quantity').text(qty+' tờ');
+            // $('#quantity_hidden').text(qty);
+            // $('#quantity_hidden').number( true, 0);
+            // var qty_2 = $('#quantity_hidden').text();
+            // $('#quantity').text(qty_2+' cái');
         }
     });
     $('#yc-bao-gia').click(function(){
