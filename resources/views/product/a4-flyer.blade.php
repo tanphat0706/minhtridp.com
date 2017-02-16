@@ -77,8 +77,8 @@
                             <h5>File thiết kế:</h5>
                             <div class="select-style left">
                                 <select name="option3" id="option3">
+                                    <option selected value="Chưa có">Chưa có</option>
                                     <option value="Đã có">Đã có</option>
-                                    <option value="Chưa có">Chưa có</option>
                                 </select>
                             </div>
                         </div>
@@ -87,7 +87,7 @@
                             <div class="select-style right">
                                 <select name="option4" id="option4">
                                     <option value="Couche 120">Couche 120</option>
-                                    <option value="Couche 150">Couche 150</option>
+                                    <option selected value="Couche 150">Couche 150</option>
                                     <option value="Couche 200">Couche 200</option>
                                 </select>
                             </div>
@@ -99,7 +99,7 @@
                             <div class="select-style left">
                                 <select name="option1" id="option1">
                                     <option value="1 mặt">1 mặt</option>
-                                    <option value="2 mặt">2 mặt</option>
+                                    <option selected value="2 mặt">2 mặt</option>
                                 </select>
                             </div>
                         </div>
@@ -107,7 +107,7 @@
                             <h5>Cán màng:</h5>
                             <div class="select-style right">
                                 <select name="option2" id="option2">
-                                    <option value="Không cán màng">Không cán màng</option>
+                                    <option selected value="Không cán màng">Không cán màng</option>
                                     <option value="Cán màng bóng">Cán màng bóng</option>
                                     <option value="Cán màng mờ">Cán màng mờ</option>
                                     <option value="Cán vân">Cán vân</option>
@@ -120,11 +120,11 @@
                                 <h5>Chọn số lượng:</h5>
                             </div>
                             <div class="col-md-12 qty-div">
-                                <label class="btn btn-success active">10<br><i>tờ</i><br><input type="radio" checked value="10" name="qty" id="default" class="badgebox"></label>
+                                <label class="btn btn-success">10<br><i>tờ</i><br><input type="radio" checked value="10" name="qty" id="default" class="badgebox"></label>
                                 <label class="btn btn-success">20<br><i>tờ</i><br><input type="radio" value="20" name="qty" id="primary" class="badgebox"></label>
                                 <label class="btn btn-success">50<br><i>tờ</i><br><input type="radio" value="50" name="qty" id="info" class="badgebox"></label>
                                 <label class="btn btn-success">100<br><i>tờ</i><br><input type="radio" value="100" name="qty" id="success" class="badgebox"></label>
-                                <label class="btn btn-success">1000<br><i>tờ</i><br><input type="radio" value="1000" name="qty" id="warning" class="badgebox"></label>
+                                <label class="btn btn-success active">1000<br><i>tờ</i><br><input type="radio" value="1000" name="qty" id="warning" class="badgebox"></label>
                                 <label class="btn btn-success">2000<br><i>tờ</i><br><input type="radio" value="2000" name="qty" id="danger" class="badgebox"></label>
                                 <label class="btn btn-success">3000<br><i>tờ</i><br><input type="radio" value="3000" name="qty" id="default" class="badgebox"></label>
                                 <label class="btn btn-success">5000<br><i>tờ</i><br><input type="radio" value="5000" name="qty" id="primary" class="badgebox"></label>

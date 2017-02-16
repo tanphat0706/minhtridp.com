@@ -40,7 +40,7 @@
                                 </li>
                             @else
                                 <li>
-                                    <a class="page-scroll" href="{{route('login')}}">Tài khoản</a>
+                                    <a class="page-scroll" href="{{route('tai-khoan')}}">Tài khoản</a>
                                 </li>
                             @endif
                         </ul>
@@ -178,7 +178,7 @@
 
                             @else
                                 <div class="col-xs-12 btn-mobile-menu-container btn-login-container">
-                                    <a href="#account" class="btn btn-default btn-mobile-menu btn-login wt-identifier wti_loginmobileurl">
+                                    <a href="{{route('tai-khoan')}}" class="btn btn-default btn-mobile-menu btn-login wt-identifier wti_loginmobileurl">
                                         <img src="{{asset('images/key.png')}}">Đăng nhập tài khoản
                                     </a>
                                 </div>

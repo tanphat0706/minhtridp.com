@@ -8260,7 +8260,7 @@ h6, .h6 {
     background-image: none;
     border: none;
     white-space: nowrap;
-    border-radius: 2px;
+    border-radius: 4px;
     font-size: 13pt;
     -webkit-transition: all .3s;
     -moz-transition: all .3s;

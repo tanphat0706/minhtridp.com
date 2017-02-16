@@ -60,7 +60,8 @@ class AuthController extends Controller
             'name' => 'required|max:255',
             'email' => 'required|email|max:255|unique:users',
             'phone' => 'required|numeric|digits_between:10,11',
-            'password' => 'required|confirmed|min:6'
+            'password' => 'required|confirmed|min:6',
+            'password_confirmation' => 'required'
         ]);
     }
 
@@ -91,8 +92,8 @@ class AuthController extends Controller
     protected function login(Request $request)
     {
         if (Auth::attempt([
-            'email' => $request->email,
-            'password' => $request->password,
+            'email' => $request->l_email,
+            'password' => $request->l_password,
             'status' => 1
         ])) {
             Session::set('authUserId', auth()->user()->id);
@@ -124,23 +125,23 @@ class AuthController extends Controller
         return redirect()->route('frontend');
     }
 
-    public function postRegister(Request $request)
-    {
-        $validator = $this->validator($request->all());
-
-        if ($validator->fails())
-        {
-            $this->throwValidationException(
-                $request, $validator
-            );
-        }
-
-        $user = $this->create($request->all());
-
-        if ($request->get('active')) {
-            $this->auth->login($user);
-        }
-
-        return redirect()->route('frontend');
-    }
+//    public function postRegister(Request $request)
+//    {
+//        $validator = $this->validator($request->all());
+//
+//        if ($validator->fails())
+//        {
+//            $this->throwValidationException(
+//                $request, $validator
+//            );
+//        }
+//
+//        $user = $this->create($request->all());
+//
+//        if ($request->get('active')) {
+//            $this->auth->login($user);
+//        }
+//
+//        return redirect()->route('frontend');
+//    }
 }

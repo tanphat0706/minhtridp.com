@@ -90,7 +90,7 @@ $(document).ready(function(){
     for (i = 1; i < 5; ++i) {
         $('#option_'+i).text($('#option'+i).val());
     }
-    $("#quantity").text($("input[name='qty']").val()+' tờ');
+    $("#quantity").text($("label.active input[name='qty']").val()+' tờ');
     $("#option1").change(function(){
         $('#option1 option').each(function() {
             if ($(this).is(':selected')){

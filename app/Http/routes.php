@@ -35,6 +35,10 @@ Route::group([
         'as' => 'tin-tuc',
         'uses' => 'HomeController@blog'
     ]);
+    Route::get('/tai-khoan', [
+        'as' => 'tai-khoan',
+        'uses' => 'HomeController@account'
+    ]);
     Route::get('/login', [
         'as' => 'login',
         'uses' => 'Auth\AuthController@getLogin'

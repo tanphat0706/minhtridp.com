@@ -220,22 +220,36 @@
                     </div>
                     <div class="col-md-7 col-lg-6 payment-row">
                         <div class="payment-box">
-                            <div class="col-md-3 col-lg-4 col-lg-offset-3 hidden-xs no-padding">
+                            <div class="col-md-3 col-lg-4 col-lg-offset-2 hidden-xs no-padding">
                                 <span class="we-accept" style="float: right">Chấp nhận thanh toán</span>
                             </div>
-                            <div class="col-lg-5 no-padding">
-                                <div class="hidden-xs right">
+                            <div class="col-lg-5 no-padding" style="float: right">
+                                <div class="hidden-xs">
                                     <div class="row">
-                                        <div class="payment-cards card1"></div>
-                                        <div class="payment-cards card2"></div>
-                                        <div class="payment-cards card3"></div>
+                                        <ul class="list-inline">
+                                            <li>
+                                                <a style="float: left" href="javascript:void(0)" data-toggle="tooltip" data-placement="top" data-html="true" title="LÊ NGUYỄN MINH TRÍ <br> 0251002704514">
+                                                    <div class="payment-cards card3"></div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a style="float: left" href="javascript:void(0)" data-toggle="tooltip" data-placement="top" data-html="true" title="LÊ NGUYỄN MINH TRÍ <br> 151259929">
+                                                    <div class="payment-cards card1"></div>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a style="float: left" href="javascript:void(0)" data-toggle="tooltip" data-placement="top" data-html="true" title="LÊ NGUYỄN MINH TRÍ<br>Đang cập nhập...">
+                                                    <div class="payment-cards card2"></div>
+                                                </a>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
                                 <div class="hidden-lg hidden-md">
                                     <div class="payment-cards-row">
+                                        <div class="payment-cards payment-images card3"></div>
                                         <div class="payment-cards payment-images card1"></div>
                                         <div class="payment-cards payment-images card2"></div>
-                                        <div class="payment-cards payment-images card3"></div>
                                     </div>
                                 </div>
                             </div>
@@ -276,4 +290,9 @@
             </div>
         </div>
     </div>
+    <script>
+        $(document).ready(function(){
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
 </footer>
