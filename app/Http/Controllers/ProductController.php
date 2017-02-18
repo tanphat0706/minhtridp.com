@@ -105,7 +105,7 @@ class ProductController extends Controller
                 return redirect()->back();
             } else {
                 \Session::flash('error', 'Vui lòng đăng nhập trước khi yêu cầu báo giá !');
-                return redirect()->back();
+                return redirect()->route('tai-khoan');
             }
 
     }

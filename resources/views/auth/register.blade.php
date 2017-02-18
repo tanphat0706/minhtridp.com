@@ -86,7 +86,7 @@
 
                             <div class="form-group">
                                 <div class="col-md-6 no-padding">
-                                    <label for="password-confirm" class="col-md-4 control-label"><span class="required">*</span> Bắt buộc</label>
+                                    <label for="password-confirm" class="control-label"><span class="required">*</span> Bắt buộc</label>
                                 </div>
                                 <div class="col-md-6 no-padding">
                                     <button type="submit" class="col-md-12 btn btn-primary">

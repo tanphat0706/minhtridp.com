@@ -139,6 +139,7 @@ class OrderController extends Controller
         \Session::flash('message','Chúng tôi sẽ liên hệ với quý khách trong thời gian sớm nhất ! Xin cảm ơn.');
         return redirect()->route('my-page');
     }
+
     public function notagree(Request $request){
         $notagree=$request->all();
         $order = $this->order->getOrderByCode($notagree['order_code']);
@@ -146,9 +147,12 @@ class OrderController extends Controller
         $orderUpdate->result = 2;
         $orderUpdate->comment = $notagree['feedback-content'];
         $orderUpdate->save();
+        $data = array('code' => $notagree['order_code'], 'user' =>\Auth::user()->name);
+        $this->sendMailRequestformUserNotAgree($data, \Auth::user()->email, 'Khách hàng không đồng ý báo giá từ Minhtri DP');
         \Session::flash('message','Cảm ơn vì đã phản ánh về dịch vụ của chúng tôi ! Xin cảm ơn.');
         return redirect()->route('my-page');
     }
+
     public function needHelp(Request $request){
         $param = $request->all();
         $data = array('name' => $param['ht_name'], 'phone' =>$param['ht_phone'], 'mail' => $param['ht_email'], 'content' =>$param['ht_content']);
@@ -167,6 +171,14 @@ class OrderController extends Controller
         \Mail::send('emails.confirm', $data, function ($message) use ($mail, $subject) {
             $message->from(env('MAIL_FROM_ADMIN'), env('MAIL_NAME_ADMIN'));
             $message->to($mail)
+                ->subject($subject);
+        });
+    }
+    protected function sendMailRequestformUserNotAgree($data, $mail, $subject)
+    {
+        \Mail::send('emails.alert', $data, function ($message) use ($mail, $subject) {
+            $message->from(env('MAIL_FROM_ADMIN'), env('MAIL_NAME_ADMIN'));
+            $message->to('letanphat0706@gmail.com')
                 ->subject($subject);
         });
     }

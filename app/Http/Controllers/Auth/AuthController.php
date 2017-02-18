@@ -98,13 +98,19 @@ class AuthController extends Controller
         ])) {
             Session::set('authUserId', auth()->user()->id);
             if (auth()->user()->isCustomer()) {
-                return redirect()->route('frontend');
+                $back_link = \Session::get('back_link');
+                if(isset($back_link)){
+                    return redirect()->route($back_link);
+                }else{
+                    return redirect()->route('frontend');
+                }
+
             }
             return redirect()->intended($this->redirectPath());
         }
 
         return redirect()->back()->withErrors([
-            'email' => trans('auth.failed_login_message')
+            'l_email' => trans('auth.failed_login_message')
         ]);
     }
 
@@ -125,23 +131,26 @@ class AuthController extends Controller
         return redirect()->route('frontend');
     }
 
-//    public function postRegister(Request $request)
-//    {
-//        $validator = $this->validator($request->all());
-//
-//        if ($validator->fails())
-//        {
-//            $this->throwValidationException(
-//                $request, $validator
-//            );
-//        }
-//
-//        $user = $this->create($request->all());
-//
+    public function postRegister(Request $request)
+    {
+        $validator = $this->validator($request->all());
+
+        if ($validator->fails())
+        {
+            $this->throwValidationException(
+                $request, $validator
+            );
+        }
+        $user = $this->create($request->all());
 //        if ($request->get('active')) {
 //            $this->auth->login($user);
 //        }
-//
-//        return redirect()->route('frontend');
-//    }
+        Auth::guard($this->getGuard())->login($user);
+        $back_link = \Session::get('back_link');
+        if(isset($back_link)){
+            return redirect()->route($back_link);
+        }else{
+            return redirect()->route('frontend');
+        }
+    }
 }

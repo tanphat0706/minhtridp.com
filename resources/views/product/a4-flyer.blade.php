@@ -2,6 +2,16 @@
 @section('title', 'Tờ rơi A4 | Minh Trí DP')
 
 @section('content')
+    <?php
+        if(!(\Auth::user())){
+            \Session::put('back_link',\Route::currentRouteName());
+        }elseif(\Auth::user()){
+            $back_link = \Session::forget('back_link');
+            if(isset($back_link)){
+                \Session::forget('back_link');
+            }
+        }
+    ?>
     <div class="container hidden-xs breadcrumb no-padding">
         <div class="row">
             <div class="col-md-12">
